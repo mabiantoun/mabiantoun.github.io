@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+
+function hasName(form)
+{
+  if( form.theName.options[form.theName.selectedIndex].value =="")
+	return( false);
+  return( true);
+}
+
+function hasPass(form)
+{
+  if( form.thePass.value == "")
+     return( false);
+  return( true);
+}
+
+function hasTeam(form)
+{
+  if( form.theTeam.options[form.theTeam.selectedIndex].value =="")
+     return( false);
+  return( true);
+}
+
+function hasWeek(form)
+{
+  if( form.theWeek.options[form.theWeek.selectedIndex].value =="")
+     return( false);
+  return( true);
+}
+
+function validateForm(form)
+{
+  var base = "Please make sure to:";
+  var text = "";
+
+  if( hasName(form) == false)
+	text += "\n- Select your Name";
+  if( hasPass(form) == false)
+    text += "\n- Enter your password";
+  if ( hasTeam(form) == false )
+    text += "\n- Select your Team";
+  if( hasWeek(form) == false)
+	text += "\n- Select the Week";
+  if( text == "")
+    return( true);
+  else
+  {
+    base += text;
+    alert(base);
+    return( false);
+  }
+}
+</SCRIPT>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.06 [en] (Win95; I) [Netscape]">
+<TITLE>Weekly Effort Form</TITLE>
+</HEAD>
+<BODY>
+
+<FORM ACTION="http://aldrich.isri.cmu.edu/cgi-bin/413/submit_effort.pl" METHOD="POST" ENCTYPE="x-www-form-urlencoded" NAME="theForm" onSubmit="return validateForm(this)">
+<CENTER>
+<H1>Weekly Effort Form</H1></CENTER>
+
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 >
+<TR>
+<TD><B>Name:</B></TD>
+
+<TD><SELECT NAME="theName">
+<OPTION SELECTED VALUE="">Select Name
+<OPTION VALUE="">----- Team 1 -----
+<OPTION VALUE="Nariman Ammar">Nariman Ammar
+<OPTION VALUE="Raha Momeni">Raha Momeni
+<OPTION VALUE="Nikita Patel">Nikita Patel
+<OPTION VALUE="">----- Team 2 -----
+<OPTION VALUE="Joseph Goree">Joseph Goree
+<OPTION VALUE="Amr Noureldin">Amr Noureldin
+<OPTION VALUE="Talia Selitsky">Talia Selitsky
+<OPTION VALUE="">----- Team 3 -----
+<OPTION VALUE="Adel Alaeddini">Adel Alaeddini
+<OPTION VALUE="Upuli Amarasinghe">Upuli Amarasinghe
+<OPTION VALUE="Shweta Bhangdia">Shweta Bhangdia
+<OPTION VALUE="Fayez Khazalah">Fayez Khazalah
+</SELECT></TD>
+
+<TD><B>Password:</B></TD>
+
+<TD><INPUT TYPE="password" NAME="thePass" SIZE="18" MAXLENGTH="8"></TD>
+</TR>
+
+<TR>
+<TD><B>Team:</B></TD>
+
+<TD><SELECT NAME="theTeam">
+<OPTION SELECTED VALUE="">Select Team
+<OPTION VALUE="Team 1">Team 1
+<OPTION VALUE="Team 2">Team 2
+<OPTION VALUE="Team 3">Team 3
+</SELECT></TD>
+
+<TD><B>Week:</B></TD>
+
+<TD><SELECT NAME="theWeek">
+<OPTION SELECTED VALUE="">Select Week
+<OPTION VALUE="Week 01 (Sep 14 - Sep 20)">Week 01 (Sep 14 - Sep 20)
+<OPTION VALUE="Week 02 (Sep 21 - Sep 27)">Week 02 (Sep 21 - Sep 27)
+<OPTION VALUE="Week 03 (Sep 28 - Oct 04)">Week 03 (Sep 28 - Oct 04)
+<OPTION VALUE="Week 04 (Oct 05 - Oct 11)">Week 04 (Oct 05 - Oct 11)
+<OPTION VALUE="Week 05 (Oct 12 - Oct 18)">Week 05 (Oct 12 - Oct 18)
+<OPTION VALUE="Week 06 (Oct 19 - Oct 25)">Week 06 (Oct 19 - Oct 25)
+<OPTION VALUE="Week 07 (Oct 26 - Nov 01)">Week 07 (Oct 26 - Nov 01)
+<OPTION VALUE="Week 08 (Nov 02 - Nov 08)">Week 08 (Nov 02 - Nov 08)
+<OPTION VALUE="Week 09 (Nov 09 - Nov 15)">Week 09 (Nov 09 - Nov 15)
+<OPTION VALUE="Week 10 (Nov 16 - Nov 22)">Week 10 (Nov 16 - Nov 22)
+<OPTION VALUE="Week 11 (Nov 23 - Nov 29)">Week 11 (Nov 23 - Nov 29)
+<OPTION VALUE="Week 12 (Nov 30 - Dec 06)">Week 12 (Nov 30 - Dec 06)
+<OPTION VALUE="Week 13 (Dec 07 - Dec 13)">Week 13 (Dec 07 - Dec 13)
+<OPTION VALUE="Week 14 (Dec 14 - Dec 20)">Week 14 (Dec 14 - Dec 20)
+</SELECT></TD>
+</TR>
+</TABLE>
+
+<TABLE BORDER=2 CELLSPACING=2 CELLPADDING=4>
+<TR>
+<TH>Activity</TH>
+
+<TH>Mon</TH>
+
+<TH>Tue</TH>
+
+<TH>Wed</TH>
+
+<TH>Thu</TH>
+
+<TH>Fri</TH>
+
+<TH>Sat</TH>
+
+<TH>Sun</TH>
+</TR>
+
+<TR>
+<TD COLSPAN="8">
+<CENTER><B>Course Homeworks and Readings</B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><B><A HREF="javascript:void(0)" onClick="(window.open ('EffortFormHelp.html#Assignment1', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()">Assignment:</A></B>
+<INPUT TYPE="text" NAME="Act1a" SIZE="30" MAXLENGTH="30"><br>
+Enter each weekly assignment separately.<br>
+Indicate the name of the assignment.</TD>
+
+<TD><INPUT TYPE="text" NAME="Act1M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act1T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act1W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act1Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act1F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act1S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act1Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><B><A HREF="javascript:void(0)" onClick="(window.open ('EffortFormHelp.html#Assignment2', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()">Assignment:</A></B>
+<INPUT TYPE="text" NAME="Act2a" SIZE="30" MAXLENGTH="30"><br>
+Enter each weekly assignment separately.<br>
+Indicate the name of the assignment.</TD>
+
+<TD><INPUT TYPE="text" NAME="Act2M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act2T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act2W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act2Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act2F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act2S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act2Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><a href="javascript:void(0)"><b>Course </b></a><B>
+<A HREF="javascript:void(0)" onClick="(window.open ('EffortFormHelp.html#Readings', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()">
+Readings:</A></B></TD>
+
+<TD><INPUT TYPE="text" NAME="Act3M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act3T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act3W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act3Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act3F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act3S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act3Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD COLSPAN="8">
+<p align="center"><B>Training/Learning/Client Interaction</B></TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><B>
+<A HREF="javascript:void(0)" onClick="(window.open('EffortFormHelp.html#Training', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()">
+Tool Training/Learning:</A></B></TD>
+
+<TD><INPUT TYPE="text" NAME="Act4M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act4T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act4W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act4Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act4F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act4S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act4Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40">
+<A HREF="javascript:void(0)" onClick="(window.open('EffortFormHelp.html#Client', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()">
+<b>Client Interactions:</b></a></TD>
+<TD><INPUT TYPE="text" NAME="Act5M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act5T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act5W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act5Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act5F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act5S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act5Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><A HREF="javascript:void(0)" onClick="(window.open('EffortFormHelp.html#Application', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()"><b>Application Research:</b></a></TD>
+
+<TD><INPUT TYPE="text" NAME="Act6M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act6T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act6W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act6Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act6F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act6S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act6Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD COLSPAN="8">
+<CENTER><B>Team Interactions</B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><A HREF="javascript:void(0)" onClick="(window.open('EffortFormHelp.html#Team', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()"><b>Team Interactions:</b></a></TD>
+
+<TD><INPUT TYPE="text" NAME="Act8M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act8T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act8W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act8Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act8F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act8S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act8Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><A HREF="javascript:void(0)" onClick="(window.open('EffortFormHelp.html#Programming', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()"><b>Pair Programming:</b></a></TD>
+
+<TD><INPUT TYPE="text" NAME="Act9M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act9T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act9W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act9Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act9F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act9S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act9Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD COLSPAN="8">
+<CENTER><B>Other Project Work</B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><b>
+<A HREF="javascript:void(0)" onClick="(window.open('EffortFormHelp.html#Other', 'newWin','menubar=no,scrollbars=yes,status=no,width=300,height=200')).focus()">
+Other Project Work</a>:</b></TD>
+
+<TD><INPUT TYPE="text" NAME="Act15M" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act15T" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act15W" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act15Th" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act15F" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act15S" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act15Su" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD COLSPAN="8">
+<CENTER><B>Other Effort Not Covered Here</B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><INPUT TYPE="text" NAME="Other20a" SIZE="40" MAXLENGTH="50"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20aM" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20aT" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20aW" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20aTh" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20aF" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20aS" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20aSu" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><INPUT TYPE="text" NAME="Other20b" SIZE="40" MAXLENGTH="50"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20bM" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20bT" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20bW" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20bTh" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20bF" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20bS" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20bSu" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+
+<TR>
+<TD HEIGHT="40"><INPUT TYPE="text" NAME="Other20c" SIZE="40" MAXLENGTH="50"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20cM" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20cT" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20cW" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20cTh" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20cF" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20cS" SIZE="4" MAXLENGTH="4"></TD>
+
+<TD><INPUT TYPE="text" NAME="Act20cSu" SIZE="4" MAXLENGTH="4"></TD>
+</TR>
+</TABLE>
+
+<CENTER><TABLE COLS=2 WIDTH="100%" >
+<TR>
+<TD>
+<DIV ALIGN=right><INPUT TYPE="submit" VALUE="Submit Form"></DIV>
+</TD>
+
+<TD><INPUT TYPE="reset" VALUE="Clear"></TD>
+</TR>
+</TABLE></CENTER>
+<i>Note: It is not recommended to submit the Weekly Effort Form multiple 
+times. <br>
+Every time you submit the form, the data will be appended to the Weekly 
+Effort Report for your team (with a timestamp).</i>
+
+<HR WIDTH="100%">
+</BODY>
+</HTML>

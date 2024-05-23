@@ -1,0 +1,481 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CSC 7110: Software Engineering Environments and Tools</title>
+</head>
+
+<body>
+
+<h1 align="center"><b>CSC 7110: Software Engineering Environments and Tools</b></h1>
+<p align="left"><b>Winter Term 2010</b><br>
+<b>Meetings: </b>Monday and Wednesday 03:00PM - 04:20PM <br>
+<b>Room:</b> 0400 STAT&nbsp;(State Hall)<br>
+<b>Instructor:</b> Prof. Marwan Abi-Antoun<br>
+<b>E-mail:</b> <img border="0" src="email2.png" width="161" height="13"><i> 
+(Please include CSC 7110 in the subject line for faster replies.)</i><br>
+<b>Phone:</b> (313) 577-2831 <i>(Please call only during regular office hours. 
+However, you may send email anytime.)</i><br>
+<b>Office: </b>448 State Hall<br>
+<b>Office Hours:</b> Monday and Wednesday 4:30PM – 6:00PM or by appointment.</p>
+<p align="left"><b>Blackboard: </b>Important information will be posted on 
+Blackboard (<a href="http://blackboard.wayne.edu">http://blackboard.wayne.edu</a>). </p>
+<h3>Class Overview</h3>
+<p>This class is about software analysis tools and will cover the following 
+topics:</p>
+<ul>
+	<li>Static analysis tools:<ul>
+		<li>Principles of static analysis</li>
+		<li>Applications</li>
+		<li>Assignments: write a plugin using the Eclipse Abstract Syntax Tree 
+		to perform some static analysis</li>
+	</ul>
+	</li>
+	<li>Dynamic analysis tools:<ul>
+		<li>General principles for dynamic analysis and infrastructure</li>
+		<li>Applications</li>
+		<li>Assignments: run a dynamic analysis tool</li>
+	</ul>
+	</li>
+	<li>Evaluation of tools:<ul>
+	<li>Exploratory and evaluative studies</li>
+	<li>Analytical studies (case studies, extended examples)</li>
+	<li>Assignment: evaluate research/commercial tool</li>
+</ul>
+	<li>Other assignments:: 
+<ul>
+	<li>Probe a software system for security violations</li>
+	<li>Analyze the code structure of a system</li>
+</ul>
+	</li>
+</ul>
+<h3>Prerequisites</h3>
+<ul>
+	<li>Working knowledge of the Java programming language or similar (C++, C#, etc.)</li>
+	<li>Good knowledge of software engineering principles (CSC 4110, CSC 6110, or 
+	equivalent)</li>
+	<li>Or instructor's approval</li>
+</ul>
+<h3>Schedule of Topics, Readings, and Assignments</h3>
+<p>The slides for the lectures will be in Blackboard. This schedule is tentative 
+and subject to change. Please check back regularly. A date with an asterisk * 
+indicates an exception to the office hours. Please make an appointment to see 
+the instructor at a different time if needed. The important deadlines are <b>
+<span style="background-color: #FFFF00">highlighted</span></b>. Generally, <b>
+<span style="background-color: #FFFF00">all assignments are due before class 
+on the due date.</span></b></p>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2" id="table1">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;" width="2%"><b>#</b></td>
+      <td style="vertical-align: top;" width="6%"><span style="font-weight: bold;">
+		Date</span><br>
+      </td>
+      <td style="vertical-align: top;" width="31%"><span style="font-weight: bold;">
+		Topic</span><br>
+      </td>
+      <td style="vertical-align: top;" width="21%"><span style="font-weight: bold;">
+		Reading</span><br>
+      </td>
+      <td style="vertical-align: top;" width="38%"><span style="font-weight: bold;">
+		Assignment</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5" rowspan="1" style="vertical-align: top;">
+		<b>Tool Evaluation</b></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">1</td>
+      <td style="vertical-align: top;" width="6%">Jan 11</td>
+      <td style="vertical-align: top;" rowspan="1" colspan="1" width="31%">
+		Course introduction by instructor.<br>
+		Exploratory &amp; evaluative studies:
+		Guest Lecture by Thomas Latoza</td>
+      <td colspan="1" style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">
+		<font color="#FF0000"><b>Please attend Graduate Seminar on Jan. 12th at 
+		3:00pm Rm. 110 Purdy-Kresge Library<br>
+		</b></font>Speaker: Thomas Latoza. Topic: Answering Reachability 
+		Questions.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">2</td>
+      <td style="vertical-align: top;" width="6%">Jan 13</td>
+      <td style="vertical-align: top;" width="31%">Designing studies &amp; analyzing 
+		data: Guest Lecture by Thomas 
+		Latoza</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">
+		&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">&nbsp;</td>
+      <td style="vertical-align: top;" width="6%"><i>Jan 18</i></td>
+      <td style="vertical-align: top;" width="91%" colspan="3">
+		<p style="text-align: center"><i>Martin Luther King Day -- No class</i></td>
+    </tr>
+    <tr>
+      <td colspan="5" rowspan="1" style="vertical-align: top;">
+		<span style="font-weight: 700">Static Analysis</span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">3</td>
+      <td style="vertical-align: top;" width="6%">Jan 20</td>
+      <td style="vertical-align: top;" width="31%">Program Representation: 
+		Abstract Syntax Trees; Visitor design pattern</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">4</td>
+      <td style="vertical-align: top;" width="6%">Jan 25<b><font face="Times New Roman">‡</font></b></td>
+      <td style="vertical-align: top;" width="31%">Course Analysis Toolkit: 
+		Eclipse, Crystal Static Analysis Framework</td>
+      <td style="vertical-align: top;" width="21%"> &nbsp;</td>
+      <td style="vertical-align: top;" width="38%"> 
+		<b><font face="Times New Roman"> ‡ </font></b><span class="event-title">
+		<span class="summary">Last Day to Register/Add Classes</span></span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">5</td>
+      <td style="vertical-align: top;" width="6%">Jan 27</td>
+      <td style="vertical-align: top;" width="31%">Program Semantics</td>
+      <td style="vertical-align: top;" width="21%">
+		&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">Assignment1:&nbsp; 
+		Visitor-based static analysis using Eclipse/Crystal<br>
+		(Due Feb. 08)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">6</td>
+      <td style="vertical-align: top;" width="6%">Feb 01</td>
+      <td style="vertical-align: top;" width="31%">Introduction to Dataflow Analysis: 
+		Zero Analysis, Lattices</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">
+		&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">7</td>
+      <td style="vertical-align: top;" width="6%">Feb 03</td>
+      <td style="vertical-align: top;" width="31%">Dataflow Analysis: Lattices, 
+		Abstraction Functions, Control Flow Graphs</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">8</td>
+      <td style="vertical-align: top;" width="6%">Feb 08</td>
+      <td style="vertical-align: top;" width="31%">Dataflow Analysis: Flow 
+		functions</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">
+		Assignment2: Program Semantics, Representation and Static Analysis 
+		(written)<br>
+		(Due Feb. 22)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">&nbsp;</td>
+      <td style="vertical-align: top;" width="6%"><i>Feb 10</i></td>
+      <td style="vertical-align: top;" width="91%" colspan="3">
+		<p style="text-align: center"><i>Snow Day (University Closed) -- No class</i></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">9</td>
+      <td style="vertical-align: top;" width="6%">Feb 15</td>
+      <td style="vertical-align: top;" width="31%">Dataflow Analysis: Constant 
+		Propagation, Reading Definitions, Live Variables</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">10</td>
+      <td style="vertical-align: top;" width="6%">Feb 17</td>
+      <td style="vertical-align: top;" width="31%">Dataflow Analysis: 
+		Correctness</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%" height="26">11</td>
+      <td style="vertical-align: top;" width="6%" height="26">Feb 22</td>
+      <td style="vertical-align: top;" width="31%">Dataflow Analysis: PREfix</td>
+      <td style="vertical-align: top;" width="21%" height="26">
+		<a href="http://citeseer.ist.psu.edu/cache/papers/cs/32530/http:zSzzSzwww.cs.washington.eduzSzeducationzSzcourseszSz590mdzSz01spzSzspe-revised.pdf/bush00static.pdf">
+		A Static Analyzer for Finding Dynamic Programming Errors</a></td>
+      <td style="vertical-align: top;" width="38%" height="26">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">12</td>
+      <td style="vertical-align: top;" width="6%">Feb 24</td>
+      <td style="vertical-align: top;" width="31%">Dataflow Analysis: 
+		Inter-procedural analysis; <br>
+		Assignment 2 discussion; Review</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">
+		&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%"> 13</td>
+      <td style="vertical-align: top;" width="6%"> Mar 01</td>
+      <td style="vertical-align: top;" width="31%">Midterm exam</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">
+		Assignment3: Dataflow analysis implementation (programming)<br>
+		(Due Mar. 15)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">14</td>
+      <td style="vertical-align: top;" width="6%">Mar 03</td>
+      <td style="vertical-align: top;" width="31%">
+		Dataflow Analysis: Crystal Static Analysis Framework<br>
+		Assignment 1 discussion</td>
+      <td style="vertical-align: top;" width="21%">
+		&nbsp;</td>
+      <td style="vertical-align: top;" width="38%"> &nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="96%" colspan="5"><b>Type systems</b></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">15</td>
+      <td style="vertical-align: top;" width="6%">Mar 08</td>
+      <td style="vertical-align: top;" width="31%">
+		Type systems</td>
+      <td style="vertical-align: top;" width="21%">
+		&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">
+		&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">16</td>
+      <td style="vertical-align: top;" width="6%">Mar 10</td>
+      <td style="vertical-align: top;" width="31%">
+		Featherweight Java</td>
+      <td style="vertical-align: top;" width="21%">
+		<a href="http://www.cis.upenn.edu/~bcpierce/papers/fj-toplas.pdf">
+		Featherweight Java: A Minimal Core Calculus for Java and GJ</a></td>
+      <td style="vertical-align: top;" width="38%"> Project: tool evaluation</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%" rowspan="2">&nbsp;</td>
+      <td style="vertical-align: top;" width="6%"><i>Mar 15</i></td>
+      <td style="vertical-align: top;" width="91%" colspan="3" rowspan="2">
+		<p style="text-align: center"><i>Spring Break -- No classes</i></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" rowspan="1" colspan="1" width="6%"><i>Mar 
+		17</i></td>
+     </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">17</td>
+      <td style="vertical-align: top;" width="6%">Mar 22</td>
+      <td style="vertical-align: top;" width="31%">
+		Ownership types</td>
+      <td style="vertical-align: top;" width="21%">
+		<a href="http://archjava.fluid.cs.cmu.edu/papers/oopsla02.pdf">Alias 
+		Annotations for Program Understanding</a><br>
+		<a href="http://www.cs.cmu.edu/~aldrich/papers/ecoop04.pdf">Ownership 
+		Domains: Separating Aliasing Policy from Mechanism</a></td>
+      <td style="vertical-align: top;" width="38%">Project: project bids due<br>
+		&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">18</td>
+      <td style="vertical-align: top;" width="6%">Mar 24</td>
+      <td style="vertical-align: top;" width="31%">Adding and Checking Ownership 
+		Domain Annotations</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="96%" colspan="5">
+				<b>Project meetings</b></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">19</td>
+      <td style="vertical-align: top;" width="6%">Mar 29</td>
+      <td style="vertical-align: top;" width="31%">Individual/team meetings with 
+		instructor to discuss projects</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">
+		&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="96%" colspan="5">
+				<b>Dynamic analysis</b></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">20</td>
+      <td style="vertical-align: top;" width="6%">Mar 31</td>
+      <td style="vertical-align: top;" width="31%">Dynamic analysis 1</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">21</td>
+      <td style="vertical-align: top;" width="6%">Apr 05</td>
+      <td style="vertical-align: top;" width="31%"> Dynamic analysis 2</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">Project: interim report due</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="96%" colspan="5">
+				<b>Special topics</b></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">22</td>
+      <td style="vertical-align: top;" width="6%">Apr 07</td>
+      <td style="vertical-align: top;" width="31%">Industry case studies: quality at Microsoft</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">23</td>
+      <td style="vertical-align: top;" width="6%">Apr 12</td>
+      <td style="vertical-align: top;" width="31%">Impact analysis: guest 
+		lecture by Radu Vanciu</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%"> &nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">24</td>
+      <td style="vertical-align: top;" width="6%">Apr 14</td>
+      <td style="vertical-align: top;" width="31%">
+		Security analysis</td>
+      <td style="vertical-align: top;" width="21%">
+		&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">25</td>
+      <td style="vertical-align: top;" width="6%">Apr 19</td>
+      <td style="vertical-align: top;" width="31%">
+		Reengineering analysis: Reflexion Models<br>
+		Official Course Evaluations<b><font face="Times New Roman"> ‡</font></b></td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%"> 
+		<font face="Times New Roman"><b>‡</b> Instructor will not be present 
+		while students complete the evaluation forms.</font></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">26</td>
+      <td style="vertical-align: top;" width="6%">Apr 21</td>
+      <td style="vertical-align: top;" width="31%">
+		Safe Concurrency/SureLogic (Fluid)</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">27</td>
+      <td style="vertical-align: top;" width="6%">Apr 26</td>
+      <td style="vertical-align: top;" width="31%">
+		Course wrap-up</td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" width="2%">28</td>
+      <td style="vertical-align: top;" width="6%"><b>
+		<span style="background-color: #FFFF00">Friday Apr 30</span></b></td>
+      <td style="vertical-align: top;" width="31%">
+		<span style="background-color: #FFFF00"><b>Project Presentations</b></span><b><span style="background-color: #FFFF00"> (1:20 -- 3:50PM)</span></b></td>
+      <td style="vertical-align: top;" width="21%">&nbsp;</td>
+      <td style="vertical-align: top;" width="38%"><b>
+		<span style="background-color: #FFFF00">Project: presentations and final 
+		reports due (*)<br>
+		* Unless you are using any remaining late days.</span><font color="#FF0000"><br>
+		Please note the different day and time</font></b>, based on the
+		<a href="http://reg.wayne.edu/students/examsW10.php">University's 
+		official schedule for finals</a>.</td>
+    </tr>
+  </tbody>
+</table>
+<p align="left"><b>Academic integrity: </b>Violations of academic integrity will 
+be handled in accordance with the
+<a href="http://www.doso.wayne.edu/judicial/academic-integrity.htm">WSU policy</a>.</p>
+<p align="left"><b>Special accommodations: </b>If you have a documented 
+disability that requires accommodations, you will need to register with Student 
+Disability Services for coordination of your academic accommodations. The 
+Student Disability Services (SDS) office is located at 1600 David Adamany 
+Undergraduate Library in the Student Academic Success Services department. SDS 
+telephone number is 313-577-1851 or 313-577-3365 (TDD only). Once you have your 
+accommodations in place, I will be glad to meet with you privately during my 
+office hours to discuss your special needs. Student Disability Services’ mission 
+is to assist the university in creating an accessible community where students 
+with disabilities have an equal opportunity to fully participate in their 
+educational experience at Wayne State University.<br>
+&nbsp;</p>
+<h3>Evaluation</h3>
+Evaluation will be based on the following approximate percentages:<ul>
+	<li>
+	<b>Assignments (~60%)</b><ul>
+		<li>Demonstrate a basic understanding of analysis techniques/li>
+		<li>Evaluate engineering tradeoffs</li>
+	</ul>
+	</li>
+	<li><b>Course Project (~15%)</b><ul>
+		<li>Evaluate analysis tool</li>
+		<li>Written report and in-class presentations</span></li>
+		<li>Write and apply custom analyses</span></li>
+	</ul>
+	</li>
+	<li>
+	<b>Written Exam (Mid-Term) (~15%)</b><ul>
+		<li>Theory and engineering</li>
+	</ul>
+	</li>
+	<li><b>Class Participation and Readings (~10%)</b><ul>
+		<li>Reading questions on papers from the literature</li>
+		<li>Discussion, presentations in class</li>
+	</ul>
+	</li>
+</ul>
+<h3>Late Work Policy</h3>
+Each student has <b>5 late days for the entire semeste</b>r which can be used in 
+any assignment, so long as the assignment hand-in is not on the critical path 
+for the following assignment.&nbsp; When turning in your work, just let the 
+instructor know how many late days you are using for that assignment. Work 
+turned in late <i>after</i> the late days are used up will only be accepted 
+under extraordinary circumstances, such as a documented medical emergency. In 
+other words, after you use all your late days, you will get <b>a grade of zero</b> 
+for every assignment that you turn in late.<h3 align="left"><b>Possible topics</b></h3>
+<ul>
+	<li>Design Analysis (Code Structure): Design Structure Matrices/Lattix LDM</li>
+	<li>Profiling</li>
+	<li>Analytical studies extended examples</li>
+	<li>Protocol checking (Plural)</li>
+	<li>Program analyses related to program comprehension</li>
+	<li>Points-to analysis</li>
+	<li>Alias analysis</li>
+	<li>Call graph and control flow analysis</li>
+	<li>Information flow analysis</li>
+	<li>Reverse Engineering and Architectural Recovery Analysis</li>
+	<li>SOOT: bytecode analysis</li>
+</ul>
+<h3 align="left">Possible assignments</h3>
+<ul>
+	<li>
+	<p align="left">Assignment: design analysis</li>
+<li>
+<p align="left">Assignment: security analysis</li>
+</ul>
+<h3 align="left"><b>Possible readings</b></h3>
+<ul>
+	<li><span style="font-weight: 400">
+	<a class="l" onmousedown="return clk(this.href,'','','res','1','','0CAYQFjAA')" href="http://www.cs.cornell.edu/courses/cs711/2005fa/papers/hind-paste01.pdf">
+	<em style="font-style: normal">Pointer Analysis</em>:
+		<em style="font-style: normal">Haven't We Solved This Problem Yet</em>?</a></span></li>
+</ul>
+<h3>Credits and Acknowledgements</h3>
+<p>This course reuses, by written permission, material by Professors Jonathan 
+Aldrich and William Scherlis from Carnegie Mellon University.</p>
+<p align="right"><i>Last Updated:
+<!--webbot bot="Timestamp" S-Type="REGENERATED" S-Format="%A, %B %d, %Y %I:%M:%S %p" startspan -->Monday, May 03, 2010 09:57:33 AM<!--webbot bot="Timestamp" i-checksum="54703" endspan --></i></p>
+<hr>
+
+</body>
+
+</html>

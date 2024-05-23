@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+
+function hasName(form)
+{
+  if( form.theName.options[form.theName.selectedIndex].value =="")
+	return( false);
+  return( true);
+}
+
+function hasPass(form)
+{
+  if( form.thePass.value == "")
+     return( false);
+  return( true);
+}
+
+function hasTeam(form)
+{
+  if( form.theTeam.options[form.theTeam.selectedIndex].value =="")
+     return( false);
+  return( true);
+}
+
+function hasWeek(form)
+{
+  if( form.theWeek.options[form.theWeek.selectedIndex].value =="")
+     return( false);
+  return( true);
+}
+
+function validateForm(form)
+{
+  var base = "Please make sure to:";
+  var text = "";
+
+  if( hasName(form) == false)
+	text += "\n- Select your Name";
+  if( hasPass(form) == false)
+    text += "\n- Enter your password";
+  if ( hasTeam(form) == false )
+    text += "\n- Select your Team";
+  if( hasWeek(form) == false)
+	text += "\n- Select the Week";
+  if( text == "")
+    return( true);
+  else
+  {
+    base += text;
+    alert(base);
+    return( false);
+  }
+}
+</SCRIPT>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="GENERATOR" CONTENT="Mozilla/4.06 [en] (Win95; I) [Netscape]">
+<META NAME="Author" CONTENT="Marwan Abi-Antoun">
+<TITLE>Weekly Effort Report</TITLE>
+</HEAD>
+<BODY>
+
+<CENTER>
+<H1>View Weekly Effort Report</H1></CENTER>
+<FORM ACTION ="http://aldrich.isri.cmu.edu/cgi-bin/413/view_effort.pl" METHOD="POST"  NAME="theForm" onSubmit="return validateForm(this)">
+<TABLE BORDER=0>
+<TR>
+<TD><B>Name:</B></TD>
+
+<TD><SELECT NAME="theName">
+<OPTION SELECTED VALUE="">Select Name
+<OPTION VALUE="">----- Team 1 -----
+<OPTION VALUE="Nariman Ammar">Nariman Ammar
+<OPTION VALUE="Raha Momeni">Raha Momeni
+<OPTION VALUE="Nikita Patel">Nikita Patel
+<OPTION VALUE="">----- Team 2 -----
+<OPTION VALUE="Joseph Goree">Joseph Goree
+<OPTION VALUE="Amr Noureldin">Amr Noureldin
+<OPTION VALUE="Talia Selitsky">Talia Selitsky
+<OPTION VALUE="">----- Team 3 -----
+<OPTION VALUE="Adel Alaeddini">Adel Alaeddini
+<OPTION VALUE="Upuli Amarasinghe">Upuli Amarasinghe
+<OPTION VALUE="Shweta Bhangdia">Shweta Bhangdia
+<OPTION VALUE="Fayez Khazalah">Fayez Khazalah
+</SELECT></TD>
+
+<TD><B>Password:</B></TD>
+
+<TD><INPUT TYPE="password" NAME="thePass" SIZE="11" MAXLENGTH="11"></TD>
+</TR>
+
+<TR>
+<TD><B>Team:</B></TD>
+
+<TD><SELECT NAME="theTeam">
+<OPTION SELECTED VALUE="">Select Team
+<OPTION VALUE="Team 1">Team 1
+<OPTION VALUE="Team 2">Team 2
+<OPTION VALUE="Team 3">Team 3
+</SELECT></TD>
+
+<TD><B>Week:</B></TD>
+
+<TD><SELECT NAME="theWeek">
+<OPTION SELECTED VALUE="">Select Week
+<OPTION VALUE="Week 01 (Sep 14 - Sep 20)">Week 01 (Sep 14 - Sep 20)
+<OPTION VALUE="Week 02 (Sep 21 - Sep 27)">Week 02 (Sep 21 - Sep 27)
+<OPTION VALUE="Week 03 (Sep 28 - Oct 04)">Week 03 (Sep 28 - Oct 04)
+<OPTION VALUE="Week 04 (Oct 05 - Oct 11)">Week 04 (Oct 05 - Oct 11)
+<OPTION VALUE="Week 05 (Oct 12 - Oct 18)">Week 05 (Oct 12 - Oct 18)
+<OPTION VALUE="Week 06 (Oct 19 - Oct 25)">Week 06 (Oct 19 - Oct 25)
+<OPTION VALUE="Week 07 (Oct 26 - Nov 01)">Week 07 (Oct 26 - Nov 01)
+<OPTION VALUE="Week 08 (Nov 02 - Nov 08)">Week 08 (Nov 02 - Nov 08)
+<OPTION VALUE="Week 09 (Nov 09 - Nov 15)">Week 09 (Nov 09 - Nov 15)
+<OPTION VALUE="Week 10 (Nov 16 - Nov 22)">Week 10 (Nov 16 - Nov 22)
+<OPTION VALUE="Week 11 (Nov 23 - Nov 29)">Week 11 (Nov 23 - Nov 29)
+<OPTION VALUE="Week 12 (Nov 30 - Dec 06)">Week 12 (Nov 30 - Dec 06)
+<OPTION VALUE="Week 13 (Dec 07 - Dec 13)">Week 13 (Dec 07 - Dec 13)
+<OPTION VALUE="Week 14 (Dec 14 - Dec 20)">Week 14 (Dec 14 - Dec 20)
+</SELECT></TD>
+</TR>
+</TABLE>
+
+<CENTER>
+<P><INPUT type="submit" value="View Report"></CENTER>
+</FORM>
+<HR WIDTH="100%">
+</BODY>
+</HTML>
