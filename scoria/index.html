@@ -1,0 +1,244 @@
+
+<html> 
+ 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"> 
+<title>Finding Architectural Flaws Using Constraints: Online Appendix</title> 
+</head> 
+<body> 
+ 
+<h1 align="center">Finding Architectural Flaws Using Constraints: Online 
+Appendix<br>
+Scoria Evaluation</h1> 
+<h2 align="center"><b>Radu Vanciu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marwan Abi-Antoun<br> 
+Department of Computer Science, 
+Wayne State University</b></h2>
+<h2 align="center">Online appendix to the <b>paper: <br>
+<span style="font-weight: 400">Vanciu, R. and Abi-Antoun, M. Finding 
+Architectural Flaws Using Constraints. In <i>IEEE/ACM Conference on Automated 
+Software Engineering (ASE)</i>, 11p. 2013. </span></b></h2>
+<hr>
+<table border="1" width="100%" id="table2">
+	<tr>
+<td width="762">
+		<h3 style="margin-right: 0in; margin-left: 0in; font-size: 13.5pt; font-family: 'Times New Roman'; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: justify;">
+		<i><a href="https://www.securecoding.cert.org/confluence/x/kAC7AQ">
+		MSC00-J</a>. Use<span class="Apple-converted-space">&nbsp;</span></i><tt style="font-family: 'Courier New';"><i><span style="font-size: 10pt">SSLSocket</span></i></tt><i><span class="Apple-converted-space">&nbsp;</span>rather 
+		than<span class="Apple-converted-space">&nbsp;</span></i><tt style="font-family: 'Courier New';"><i><span style="font-size: 10pt">Socket</span></i></tt><i><span class="Apple-converted-space">&nbsp;</span>for 
+		secure data exchange.</i><span class="Apple-converted-space">&nbsp;</span></h3>
+		<p style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span class="Apple-converted-space"><span style="font-weight: 400">The 
+		code</span></span><span style="font-weight: normal;"> uses the<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Socket</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>class 
+		to implement the client-server communication over a network. However, 
+		such a communication channel does not provide encryption and the 
+		communication is vulnerable to eavesdropping.</span></p>
+		<p style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">To find a possible information 
+		disclosure, the constraint<span class="Apple-converted-space">&nbsp;</span>uses 
+		object provenance and checks if the same object that flows from an 
+		object of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">InputStream</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>in 
+		the domain<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">DATA</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>of 
+		the<span class="Apple-converted-space">&nbsp;</span><span style="font-family: Courier New"><font size="2">System</font></span> 
+		class to an object of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">EchoClient</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>also 
+		flows to an object<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">sckt:Socket</span></tt><span style="font-weight: normal;">. 
+		The constraint also uses indirect object provenance and checks that the 
+		object flows to the descendants or reachable objects of</span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;"> 
+		sckt:Socket</span></tt><span style="font-weight: normal;">. Indeed, the 
+		same object<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">ss:String</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>flows 
+		from<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">client:EchoClient</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to 
+		the object<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">out:Writer</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>from 
+		which a descendant of<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">sckt:Socket</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>is 
+		reachable. The object<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">ss</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>also 
+		flows from</span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;"> 
+		server:EchoServer</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to 
+		a descendant of<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">sckt:Socket</span></tt><span style="font-weight: normal;">. 
+		The constraint highlights these two dataflow edges as suspicious. From a 
+		suspicious dataflow edge, the architects can trace to the method 
+		invocation</span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;"> 
+		out.write(stdInput)</span></tt><span style="font-weight: normal;">. 
+		There are no coding defects, however an information disclosure does 
+		exist.</span></p>
+		<p style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">If the constraint were to use the 
+		type information only and consider all objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">OutputStream</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>as 
+		untrusted, it would report four suspicious dataflow edges including two 
+		false positives: the dataflow edge from </span>
+		<tt style="font-family: 'Courier New';">
+		<span style="font-size: 10pt; font-weight: normal;">client</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to 
+		the standard output stream, and the dataflow edge from<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">server</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to 
+		a child of<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">sslSocket:SSLSocket</span></tt><span style="font-weight: normal;">.</span></p>
+		<p>&nbsp;</td>
+		<td><embed src="sockets-dfptOGraph.svg" type="image/svg+xml" /></td>
+	</tr>
+</table>
+<hr>
+<table border="1" width="100%" id="table3">
+	<tr>
+		<td width="762">
+		<h3 style="margin-right: 0in; margin-left: 0in; font-size: 13.5pt; font-family: 'Times New Roman'; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: justify;">
+		<i><a href="https://www.securecoding.cert.org/confluence/x/pQARAg">
+		FIO05-J</a>. Do not expose buffers created using the wrap() or 
+		duplicate() methods to untrusted code.</i><span class="Apple-converted-space">&nbsp;</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">The class<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">CharBuffer</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>has 
+		methods that wrap an array of primitive types into an object of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">CharBuffer</span></tt><span style="font-weight: normal;">. 
+		According to the
+		<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/CharBuffer.html">
+		Java documentation</a>, modifications of an object of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">CharBuffer</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>cause 
+		the array to be modified and vice-versa. Therefore, passing the<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">cb:CharBuffer</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to 
+		an untrusted object exposes the array that is reachable from<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">cb</span></tt><span style="font-weight: normal;">. 
+		Instead, an object with a reference to a copy of the array should be 
+		passed.</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">The constraint<span class="Apple-converted-space">&nbsp;</span>selects 
+		the objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">CharBuffer</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>created 
+		in the body of<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">wrap</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>and 
+		duplicate methods. Next, the constraint selects the children of these 
+		objects that are of type</span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;"> 
+		char[]</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span> 
+		and assigns to them<span class="Apple-converted-space">&nbsp;</span><i>IsConfidential</i>.<i>True</i>. 
+		The constraint also assigns<span class="Apple-converted-space">&nbsp;</span><i>TrustLevel</i>.<i>Untrusted</i><span class="Apple-converted-space">&nbsp;</span>to<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">c:Client</span></tt><span style="font-weight: normal;">, 
+		which represents untrusted code. The query<span class="Apple-converted-space">&nbsp;</span><i>getFlowToSink</i><span class="Apple-converted-space">&nbsp;</span>returns 
+		a suspicious edge, such that the dataflow object<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">cb:CharBuffer</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>has 
+		a points-to edge to the confidential object of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">char[]</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>and 
+		the destination object is<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">c</span></tt><span style="font-weight: normal;">. 
+		This constraint may also consider objects of types that are similar to<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">CharBuffer</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>such 
+		as<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">IntBuffer</span></tt><span style="font-weight: normal;">.</span></h3>
+&nbsp;</td>
+		<td><embed src="charbuffer-dfptOGraph.svg" type="image/svg+xml" /></td>
+	</tr>
+</table>
+<hr>
+<table border="1" width="100%" id="table4">
+	<tr>
+		<td width="762">
+		<h3 style="margin-right: 0in; margin-left: 0in; font-size: 13.5pt; font-family: 'Times New Roman'; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: justify;">
+		<i><a href="https://www.securecoding.cert.org/confluence/x/3YAVAQ">
+		SER03-J</a>. Do not serialize unencrypted, sensitive data.</i><span class="Apple-converted-space">&nbsp;</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">Serialization saves an object 
+		persistently. All the fields reachable from the object are also saved 
+		unless the developers mark them as transient. An information disclosure 
+		exists if a confidential, unencrypted object is serialized.</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">The CERT example&nbsp;uses the<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Serializable</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>interface. 
+		Since other libraries can also be used for serialization, the<span class="Apple-converted-space">&nbsp;</span><i>SecGraph</i><span class="Apple-converted-space">&nbsp;</span>has 
+		the property<span class="Apple-converted-space">&nbsp;</span><i>IsTransient</i><span class="Apple-converted-space">&nbsp;</span>to 
+		keep the constraint independent from a specific library. The constraint<span class="Apple-converted-space">&nbsp;</span><i>insecureSerializations</i><span class="Apple-converted-space">&nbsp;</span>assigns<span class="Apple-converted-space">&nbsp;</span><i>TrustLevel</i>.<i>Untrusted</i><span class="Apple-converted-space">&nbsp;</span>to 
+		objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">ObjectOutputStream</span></tt><span style="font-weight: normal;">, 
+		then assigns<span class="Apple-converted-space">&nbsp;</span><i>IsConfidential</i>.<i>True</i><span class="Apple-converted-space">&nbsp;</span>and<span class="Apple-converted-space">&nbsp;</span><i>IsEncrypted</i>.<i>False</i><span class="Apple-converted-space">&nbsp;</span>to 
+		objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Double</span></tt><span style="font-weight: normal;"> 
+		in the domain<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">OWNED</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>of 
+		objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Point</span></tt><span style="font-weight: normal;">. 
+		Next, it assigns<span class="Apple-converted-space">&nbsp;</span><i>IsTransient</i>.<i>False</i><span class="Apple-converted-space">&nbsp;</span>to 
+		points-to edges from objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Point</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to 
+		objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Double</span></tt><span style="font-weight: normal;">. 
+		Finally,<span class="Apple-converted-space">&nbsp;</span><i>insecureSerializations</i><span class="Apple-converted-space">&nbsp;</span>checks 
+		if the<i> EdgeSet</i><span class="Apple-converted-space">&nbsp;</span>returned 
+		by<span class="Apple-converted-space">&nbsp;</span><i>getFlowToSink</i><span class="Apple-converted-space">&nbsp;</span>is 
+		not empty such that the outgoing points-to edge from the dataflow object 
+		has<span class="Apple-converted-space">&nbsp;</span><i>IsTransient</i>.<i>False</i>.</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">The constraint finds an information 
+		disclosure as a dataflow from<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">coord</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">oout</span></tt><span style="font-weight: normal;">, 
+		where the dataflow object is<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">p:Point</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>that 
+		has references to<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">value:Double</span></tt><span style="font-weight: normal;">. 
+		The object<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">value:Double</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>has 
+		the property<i> IsConfidential</i>.<i>True</i><span class="Apple-converted-space">&nbsp;</span>and 
+		should not be serialized. However, the points-to edge from<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">p</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">value</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>has<span class="Apple-converted-space">&nbsp;</span><i>IsTransient</i>.<i>False</i>, 
+		and serialization occurs. Next, the architects can trace to code and 
+		find the method invocation</span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;"> 
+		oout.writeObject(p)</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>in 
+		the body of<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Coordinates.run</span></tt><span style="font-weight: normal;">.</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">By using the condition<span class="Apple-converted-space">&nbsp;</span><i>IsInDomain</i>, 
+		the constraint assigns property values only to a subset of all the 
+		objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Double</span></tt><span style="font-weight: normal;">, 
+		i.e., it does not include children of objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Coordinate</span></tt><span style="font-weight: normal;">. 
+		If the constraint were to use the<span class="Apple-converted-space">&nbsp;</span><i>InstanceOf</i><span class="Apple-converted-space">&nbsp;</span>condition 
+		instead of<span class="Apple-converted-space">&nbsp;</span><i>IsInDomain</i>, 
+		all the objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Double</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>would 
+		be considered confidential, and<span class="Apple-converted-space">&nbsp;</span><i>insecureSerializations</i><span class="Apple-converted-space">&nbsp;</span>would 
+		return one false positive.</span></h3>
+&nbsp;</td>
+		<td><embed src="serialize-dfptOGraph.svg" type="image/svg+xml" /></td>
+	</tr>
+</table>
+<hr>
+<table border="1" width="100%" id="table5">
+	<tr>
+		<td width="762">
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<i><a href="https://www.securecoding.cert.org/confluence/x/kgGeAQ">
+		FIO13-J</a>. Do not log sensitive information outside a trust boundary.</i><span class="Apple-converted-space">&nbsp;</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">Logging enables a program to collect 
+		essential information for debugging. However, logging confidential 
+		information such as IP addresses may be prohibited by law in many 
+		countries. The class<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Logger</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>in 
+		Java provides basic functionality for logging.</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">The constraint<span class="Apple-converted-space">&nbsp;</span><i>insecureLogging</i><span class="Apple-converted-space">&nbsp;</span>checks 
+		if dataflow edges exist such that a dataflow object has<span class="Apple-converted-space">&nbsp;</span><i>IsConfidential</i>.<i>True</i><span class="Apple-converted-space">&nbsp;</span>and 
+		the destination has<span class="Apple-converted-space">&nbsp;</span><i>TrustLevel</i>.<i>Untrusted</i>. 
+		The constraint uses reachability information to assign<span class="Apple-converted-space">&nbsp;</span><i>IsConfidential</i>.<i>True</i><span class="Apple-converted-space">&nbsp;</span>only 
+		to the objects of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">String</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>reachable 
+		from an object of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">InetAddress</span></tt><span style="font-weight: normal;">. 
+		The constraint highlights a dataflow edge from<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">srvr</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>to<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">log</span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>that 
+		refers to the object<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">ip:String</span></tt><span style="font-weight: normal;">. 
+		The architects can trace to the line of code<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">logger.severe(machine.getHostAddress())</span></tt><span style="font-weight: normal;">, 
+		which indeed logs the IP address. To assign the<span class="Apple-converted-space">&nbsp;</span><i>IsConfidential</i><span class="Apple-converted-space">&nbsp;</span>property, 
+		the architects use a condition that considers type and reachability 
+		information. If the architects were to use a condition that considers 
+		only the type information,<span class="Apple-converted-space">&nbsp;</span><i>insecureLogging</i><span class="Apple-converted-space">&nbsp;</span>would 
+		return a false positive for the expression<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">logger.getLogger(name)</span></tt><span style="font-weight: normal;">, 
+		where the<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">name</span></tt><span style="font-weight: normal;">argument 
+		does not refer to a confidential object.</span></h3>
+&nbsp;</td>
+		<td><embed src="logs-dfptOGraph.svg" type="image/svg+xml" /></td>
+	</tr>
+</table>
+<hr>
+<table border="1" width="100%" id="table6">
+	<!-- MSTableType="nolayout" -->
+	<tr>
+		<td width="762">
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<i><a href="https://www.securecoding.cert.org/confluence/x/WwGyAQ">
+		IDS07-J</a>. Do not pass untrusted, unsanitized data to the Runtime.exec() 
+		method.</i><span class="Apple-converted-space">&nbsp;</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">A Java program can invoke external 
+		commands provided by the operating system, such as a command that lists 
+		a folder's content. An architectural flaw exists if an attacker can 
+		tamper with the input and launch arbitrary injected commands with the 
+		privileges of the target user. As a solution, the program must sanitize 
+		untrusted objects flowing along untrusted communication.</span></h3>
+		<h3 style="font-size: 13.5pt; font-family: Times New Roman; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; margin-left: 0in; margin-right: 0in">
+		<span style="font-weight: normal;">We adapted the example from CERT 
+		where the attacker can invoke arbitrary commands on Windows by tampering 
+		with the arguments of the method<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Runtime.exec</span></tt><span style="font-weight: normal;">. 
+		The constraint<span class="Apple-converted-space">&nbsp;</span><i>commandInjections</i><span class="Apple-converted-space">&nbsp;</span>finds 
+		tampering by using object provenance, and traceability information. It 
+		uses object provenance to check if the same object that is passed as an 
+		argument to<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">m:<st1:place w:st="on">Main</st1:place></span></tt><span style="font-weight: normal;"><span class="Apple-converted-space">&nbsp;</span>is 
+		also passed to an object of type<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Runtime</span></tt><span style="font-weight: normal;">. 
+		It also uses traceability and highlights only dataflow edges due to the 
+		method invocation<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">Runtime.exec</span></tt><span style="font-weight: normal;">. 
+		The architects trace to code and find the<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">rt.exec(&quot;cmd.exe 
+		/C dir &quot; + dir)</span></tt><span style="font-weight: normal;">. If the 
+		constraint were to use only information about the type of the arguments, 
+		it would also return a false positive for<span class="Apple-converted-space">&nbsp;</span></span><tt style="font-family: 'Courier New';"><span style="font-size: 10pt; font-weight: normal;">rt.load(filename)</span></tt><span style="font-weight: normal;">.</span></h3>
+&nbsp;</td>
+		<td><embed src="runtime-dfptOGraph.svg" type="image/svg+xml"/></td>
+	</tr>
+</table>
+<hr>
+<h3></h3>
+<p ALIGN="right"><i>Last Modified:
+<!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%A, %B %d, %Y" startspan -->Friday, November 22, 2013<!--webbot bot="Timestamp" endspan i-checksum="53561" --></i></p>
+<hr> 
+ 
+</body> 
+ 
+</html> 
