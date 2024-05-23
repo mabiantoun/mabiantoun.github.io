@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Marwan Abi-Antoun, Ph.D.</title>
+    <!-- Bootstrap core CSS -->
+    <!-- link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet" -->
+    <!-- Custom styles for this template -->
+    <!-- link href="styles.css" rel="stylesheet" -->
+</head>
+
+<body>
+
+<div id="container">
+	<!-- header -->
+    <div class="header">
+        <nav class="menu">
+	    <a class="active" href="index.html">Home</a>
+		<a class="" href="publications.html">Papers</a>
+		<a class="" href="research.html">Research</a>
+		<a class="" href="teaching.html">Teaching</a>
+		<a class="" href="talks.html">Talks</a>
+		<a class="" href="software.html">Software</a>
+		<a class="" href="resume.html">Bio</a>			
+        </nav>
+    </div>
+    <!--end header -->
+</div>
+
+<!-- main -->
+<div id="main">
+   		<div id="content">
+	
+		<p align="left">I develop practical solutions to help software 
+		architects and software engineers maintain <i>intellectual control</i> 
+		over the <i>runtime architecture</i> of their systems. To accomplish 
+		that, I use techniques 
+		in <i> software architectures</i>, <i>type systems</i> and <i>program analysis</i> 
+		techniques. </p>
+		<p align="left">My research so 
+		far has included: <i>generating</i> <i>code </i>from an architectural model,
+		<i>synchronizing </i> between<i> conceptual </i> and<i> 
+		implementation-level </i> architectures<i>, evaluating</i> languages and 
+		annotations to specify <i>architectural intent </i>directly in code, <i>
+		designing </i> static analyses for the <i>
+		architectural extraction</i> of a built runtime architecture from object-oriented implementations, <i>checking</i> <i>conformance</i> 
+		of an extracted built architecture to a desired target architecture, <i>
+		reasoning</i> about <i>quality attributes </i>at the architectural level 
+		(particularly, security), and <i>providing developers with useful 
+		diagrams of the runtime structure for code modification tasks.</i></p>
+		<p align="left">The following research threads are listed from most to 
+		least recent. Also please refer to&nbsp; my <a href="publications.html">
+		<b>publications</b></a> and my <b>
+		<a href="software.html">software</a></b> page.</p>
+		<p align="left">&nbsp;</p>
+		<h2 align="left">Impact Analysis<br>
+		<b>(with Yibin Wang, </b>Ebrahim Khalaj)</h2>
+		<h3>Synopsis</h3>
+		<ul>
+			<li>Perform impact analysis based on a global hierarchical points-to 
+			graph with usage edges</li>
+			<li>Measure improvement over using local information such as 
+			visitors</li>
+			<li>Measure impact of resolving collections and interfaces more 
+			precisely</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+	<li>
+	Abi-Antoun, 
+	M., Wang, Y., Khalaj, E., Giang, A., and Rajlich, V.
+	<b><a href="papers/15-saner.pdf">Impact Analysis based on a Global Hierarchical Object Graph</a></b>.<b> </b>
+	In <i>22nd</i> <i>IEEE International Conference on Software Analysis, 
+	Evolution, and Reengineering (SANER), 2015</i>. To appear. 10 pp. [32% 
+	acceptance rate]</li>
+		</ul>
+
+		<h2 align="left"><b>Developer Tools for Code Exploration and Program 
+		Comprehension<br>
+		(with </b>Andrew Giang)</h2>
+		<h3>Synopsis</h3>
+		<ul>
+			<li>Explore code using a different perspective than the commonly 
+			used perspectives in Eclipse:<ul>
+			<li>the Java Perspective, which shows code elements in the Package 
+			Explorer, Outline View, Call Hierarchy, Type Hierarchy, etc.</li>
+			<li>the Debug Perspective, which shows concrete values (runtime 
+			objects on the heap)</li>
+		</ul></li>
+			<li>Present to developers abstract values (abstract objects)</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+	<li>
+	Abi-Antoun, 
+	M., Giang, A., Chandrashekar, S., and Khalaj, E.
+	<b><a href="papers/14-etx.pdf">The Eclipse Runtime Perspective for 
+	Object-Oriented Code Exploration and Program Comprehension</a>. </b>In <i><a href="http://2014.splashcon.org/track/etx2014">
+	Eclipse Technology eXchange Workshop (ETX)</a></i>. 6 pages, 2014. [<a href="http://dx.doi.org/10.1145/2688130.2688133">DOI</a>] 
+	[Slides]</li>
+		</ul>
+
+		<h2 align="left"><b>Measuring Properties of Human-Guided Heap 
+		Abstractions<br>
+		(with </b>Sumukhi Chandrashekar, Radu Vanciu, and Andrew Giang)</h2>
+		<h3>Synopsis</h3>
+		<ul>
+			<li>We measure properties of abstract heaps, to better 
+			understand in what respects an abstract runtime structure differs 
+			from a code structure.</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+	<li>Abi-Antoun, M., Chandrashekar, S., Vanciu, R., and Giang, A. <b>
+	<a href="papers/14-ieeescam.pdf">Are Object 
+	Graphs Extracted Using Abstract Interpretation Significantly Different from 
+	the Code?</a></b> In <i><a href="http://www.ieee-scam.org/2014/">IEEE International Working Conference on Source Code 
+	Analysis and Manipulation</a></i>, 10 pages. 2014.	[A companion technical report is available]</li>
+	<li>Abi-Antoun, M., Chandrashekar, S., Vanciu, R., and Giang, A.<a href="ACVG14_TR.pdf">
+	<b>Are Object Graphs Extracted Using Abstract Interpretation Significantly 
+	Different from the Code? (Extended Version)</b></a>. Technical report, Wayne 
+	State University, September 2014. [Companion technical report to paper at <i><a href="http://www.ieee-scam.org/2014/">
+	Conference on Source Code Analysis and Manipulation</a>'2014</i>. The technical report has the formalization of the metrics.]</li>
+		</ul>
+
+		<h2 align="left"><b>Comparative Evaluation of Approaches that Find Security Vulnerabilities<br>
+		(with </b>Ebrahim Khalaj, Radu Vanciu)</h2>
+		<h3 align="center">
+		<img border="0" src="images/comparison.gif" width="730" height="547" style="border-width: 0pt"></h3>
+		<h3>Synopsis</h3>
+		<ul>
+			<li>There are many approaches to find security vulnerabilities 
+			including type systems and static analysis techniques, but there is little in the way of comparing their effectiveness, 
+			namely precision and recall;</li>
+			<li>This research is building a hybrid benchmark, ScoriaBench, with hand-selected testcases from different sources,&nbsp;&nbsp;and 
+			directly comparing tools from different parts of the solution space 
+			in terms of precision and recall at finding&nbsp; injected security 
+			vulnerabilities;</li>
+			<li>We compared to IBM AppScan, HP Fortify and FlowDroid <span LANG="EN"><font SIZE="3">(PLDI&#39;14), a 
+			representative static taint analysis;</font></span></li>
+			<li><span LANG="EN"><font SIZE="3">On this benchmark, to date, Scoria has:</font></span><ul>
+			<li><span LANG="EN"><font SIZE="3"><b>82% 
+			recall</b> compared to 40-45% for AppScan/Fortify, <b>70% for 
+			FlowDroid;</b></font></span></li>
+			<li><span LANG="EN"><font SIZE="3"><b>86% precision</b> 
+			compared to 76-82% for AppScan/Fortify, <b>&nbsp;82% for FlowDroid.</b></font></span></li>
+		</ul>
+			</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+	<li>
+	Vanciu, R., Khalaj, E. and Abi-Antoun, M. <b>Comparative Evaluation 
+	of Architectural and Code-Level Approaches for Finding Security 
+	Vulnerabilities.</b> In <i><a href="http://hci.uncc.edu/~SecInfoWorkers">Workshop on Security 
+	Information Workers (SIW)</a></i>, co-located with the A<a href="http://www.sigsac.org/ccs/CCS2014/">CM 
+	Conference on Computer and Communications Security (CCS)</a>, 8 pages, 2014.</li>
+			<li>Khalaj, E., Vanciu, R., and Abi-Antoun, M. <b><a href="papers/KVA14_poster.pdf">
+	Is There Value in Reasoning about Security at the Architectural Level: a 
+	Comparative Evaluation.</a></b> Poster at <i>Symposium and Bootcamp on the 
+	Science of Security (HotSoS), </span>
+	</i>2014. [<a href="papers/KVA14_poster_abstract.pdf">Poster Abstract</a>] [<a href="papers/KVA14_poster_presentation.pdf">Short 
+	presentation</a>]</li>
+			<li>Khalaj, E., Vanciu, R. and Abi-Antoun, M.
+<b>Comparative Evaluation of Static Analyses that Find
+Security Vulnerabilities</b>. Technical report, Wayne State University, 2014.</li>
+		</ul>
+
+		<h2 align="left">Scoria: Approach<b> to Support Architectural Risk Analysis and 
+		Find Architectural Flaws<br>
+		(with </b>Radu Vanciu)</h2>
+		<h3 align="center">
+		<img border="0" src="images/scoria.gif" width="480" height="285" style="border-width: 0pt"></h3>
+		<h3>Synopsis</h3>
+		<ul>
+			<li>Architectural Risk Analysis is the least mature practice of 
+			finding security vulnerabilities, compared to penetration testing 
+			and static analysis; many static analysis tools focus on finding coding bugs 
+			rather than architectural flaws;</li>
+			<li>We propose that by raising the reasoning about security 
+			vulnerabilities to the architectural level, we can find more 
+			architectural flaws;</li>
+			<li>This research proposes extracting a forest-level view of the 
+			code to support architectural risk analysis, and enabling expressive constraints 
+			to query the representation and find architectural flaws.</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+<ul>
+	<li>Vanciu, R. <b><a href="students/14_vanciu_phd_thesis.pdf">Static 
+			Extraction of Dataflow Communication for Security</a>.</b> Ph.D. 
+	Thesis, Wayne State University, Department of Computer Science. May 2014.</li>
+	<li>
+	Vanciu, 
+	R. and Abi-Antoun, M. <b><a href="papers/13-ase.pdf">Finding Architectural Flaws 
+	using Constraints</a></b>. 
+	In <i>IEEE/ACM Conference on Automated Software Engineering (ASE)</i>, pp. 
+	282-292, 2013. 
+	Full research paper. [<a href="talks/13-ASE-ScoriaSec.pdf">Slides</a>] 
+	[<a href="scoria">Link to additional material</a>] <i>[17% acceptance rate 
+	for full research papers]</i></li>
+</ul>
+
+		<h2 align="left"><b>Empirical Evaluation of Object Graphs with Ownership 
+		Domains <br>
+		(with </b>Radu Vanciu)</h2>
+						
+		<h3>
+		<img border="0" src="images/metrics.gif" width="688" height="604" style="border-width: 0pt; margin: 0"></h3>
+		<p>
+		<b>Percentage of shared, lent, unique, public domain, and other 
+		annotations.</b></p>
+		<p>
+		<img border="0" src="images/abt-depth-rank.gif" width="687" height="155" style="border-width: 0pt; margin: 0"><br>
+		<b>Number of objects at each level of the OOG, after abstraction by 
+		types.</b></p>
+		<h3>Synopsis</h3>
+		<ul>
+			<li>
+			Researchers have proposed many ownership type 
+			systems but have not reported significant experience with most of 
+			them on real object-oriented code. Only a few systems have been 
+			implemented, and there have been few substantial case studies done 
+			with those systems.</li>
+			<li>
+			In order to better empirically evaluate ownership 
+			type systems, we have conducted a number of case studies applying 
+			the Ownership Domains type system to programs at a larger scale. We 
+			studied several subject systems, totaling <b>over 100 KLOC of real object-oriented code</b>. After annotating and typechecking 
+			the systems, we extracted 
+			global, hierarchical, Ownership Object Graphs (OOGs) using static 
+			analysis.</li>
+			<li>
+			In this project, we analyzed the annotations and the 
+			extracted OOGs across several subject systems. We computed metrics 
+			on the annotations and on the extracted OOGs, to gain insights into 
+			the ownership relationships latent within object-oriented code and 
+			to evaluate the effectiveness of the abstraction mechanisms in OOGs.</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+	<li>
+	Vanciu, R. and 
+	Abi-Antoun, M. <b>Object Graphs with 
+	Ownership Domains: an Empirical Study</b>. In Springer LNCS
+	<a href="http://www.springer.com/computer/lncs?SGWID=0-164-12-72945-0">
+	State-of-the-Art Survey</a> on Aliasing in Object-Oriented Programming. 
+	2013. <i>
+	To appear.</i></li>
+</ul>
+		<h2 align="left">Usefulness of Ownership Object Graphs (OOGs) for 
+		Code Modification Tasks <br>
+		(with Nariman Ammar)</h2>
+						
+		<h3>Synopsis</h3>
+		<table border="0" cellspacing="0" cellpadding="0" id="table2">
+			<tr>
+				<td>
+				<img border="0" src="images/StdErrTime.gif" width="600" height="399" style="border-width: 0pt; margin: 0"></td>
+			</tr>
+			<tr>
+				<td><b>Average time spent in the three tasks.</b></td>
+			</tr>
+		</table>
+		<table border="0" cellspacing="0" cellpadding="0" id="table3">
+			<tr>
+				<td>
+				<img border="0" src="images/StdErrCode.gif" width="600" height="399" style="border-width: 0pt; margin: 0"></td>
+			</tr>
+			<tr>
+				<td><b>Average code explored in the three tasks.</b></td>
+			</tr>
+		</table>
+		<ul>
+			<li>
+			Conducted<b> the first controlled experiment of its 
+			kind</b> to evaluate global object diagrams, in relation to class 
+			diagrams. We annotated a small (1,400 lines of Java, excluding 
+			libraries), pedagogical object-oriented framework, MiniDraw, from 
+			which <b>we extracted both global class diagrams (CDs) and Ownership 
+			Object Graphs (OOGs)</b>. 
+			We selected <b>10 participants</b>, organized into an experimental 
+			(who received OOGs) and a control group (who received CDs). We observed them use the diagrams while they 
+			perform three realistic code modification tasks (T1, T2, T3) over 
+			three hours. The tasks, e.g.,&nbsp; &quot;implement an undo feature&quot;, 
+			were not specifically designed to be easily answered using OOGs. 
+			Also, while many of our participants were graduate students, several 
+			had extensive---even industrial---programming experience. We 
+			measured the developers&#39; performance using three variables: code 
+			explored, time spent, and success on a task.</li>
+			<li>
+			Developers who used OOGs did better than their counterparts who used 
+			CDs. <b>Two of the developers who 
+			used OOGs completed the three tasks compared to only one developer 
+			who used only CDs. On average, developers who used OOGs performed 
+			their activities in less time (by 22%--60%), and by browsing less 
+			irrelevant code (by 10%--60%). The difference was significant in 
+			some cases, but not across all tasks.</b> We conjecture that the 
+			differences were related to activities which involved questions 
+			about objects and their relations. Such questions are more easily 
+			answered using OOGs compared to browsing the code or by looking at 
+			CDs.</li>
+			<li>
+			Our successful study provided statistical 
+			generalization, and was preceded by preliminary work which provided analytical generalization. In particular, we 
+			conducted a case study on DrawLets, where we added annotations, 
+			extracted OOGs, and performed code modification tasks.</li>
+			<li>
+			Conducted an exploratory study in a laboratory 
+			setting. Observed three participants perform several code 
+			modification tasks while using OOGs. The tasks changed slightly 
+			between the participants, so our analysis remained qualitative. Based on our observations, we developed a 
+			<b>taxonomy 
+			of questions that developers ask about objects and their 
+			relations.</b></li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+	<li>
+	Ammar, N. and Abi-Antoun, M. <b>Empirical Evaluation of Diagrams of 
+	the Run-time Structure for Coding Tasks.</b> 
+	In <i>Working Conference on Reverse Engineering (WCRE)</i>, 2012.<i> To 
+	appear.&nbsp; This paper has a companion technical report.</i></li>
+	<li>Ammar, N. and Abi-Antoun, M. <b>Empirical Evaluation of Diagrams of the Run-time Structure for Coding Tasks</b>. 
+	Technical report, Wayne State University, July 
+	2012. <br>
+	<i>Note: The tech. report contains additional details on the data analysis 
+	as well as detailed examples of the activities in which the participants 
+	engaged.</i></li>
+	<li>Ammar, N. and Abi-Antoun, M. <b>
+	<a href="http://www.cs.wayne.edu/~mabianto/papers/AA11.pdf">Evaluation of 
+	Global Hierarchical Object Graphs for Coding Activities: a Controlled 
+	Experiment</a>. </b>Technical report, Wayne State University, December 2011.
+	<i>&nbsp;Note: The tech. report is a shorter version of Ammar's thesis.</i></li>
+	<li>Ammar, N. <a href="students/11_nariman_ms_thesis.pdf"> <b>Evaluation of the Usefulness of Diagrams of the Run-Time 
+	Structure for Coding Activities</b>.</a> M.S. Thesis, Wayne State University, 
+	Department of Computer Science. August 2011.</li>
+	<li>
+	Abi-Antoun, 
+	M. and Ammar, N. <b><a href="papers/10-haose.pdf">A Case Study in Evaluating 
+	the Usefulness of the Run-time Structure during Coding Tasks</a></b>. In <i>
+	Workshop on Human Aspects of Software Engineering (HAoSE), co-located with 
+	SPLASH/OOPSLA, 2010. </i>[<a href="http://dx.doi.org/10.1145/1938595.1938597">DOI</a>]</li>
+	<li>
+	Abi-Antoun, M., Ammar, N. and LaToza, T. <b>
+			<a href="papers/10-chase.pdf">Questions about Object Structure during Coding 
+	Activities</a></b>. In <i>Workshop on Cooperative and Human Aspects of Software 
+	Engineering (CHASE)</i>, 2010. [<a href="papers/10-chase.pdf">Paper (PDF)</a>] [<a href="talks/10-chase-poster.pdf">Poster (PDF)</a>] 
+	[<a href="http://doi.acm.org/10.1145/1833310.1833321">DOI</a>]<br>An extended version is 
+	available as Carnegie Mellon University Technical Report 
+			<a href="http://reports-archive.adm.cs.cmu.edu/anon/isr2010/abstracts/10-102.html">CMU-ISR-10-102</a>.&nbsp;
+	</li>
+</ul>
+		<h2 align="left">Extracting Dataflow Communication from Object-Oriented 
+		Code <br>
+		(with Radu Vanciu)</h2>
+						
+		<h3>
+		<img border="0" src="images/df_example.jpg" width="723" height="450" style="border-width: 0pt; margin: 0"></h3>
+		<h3>Synopsis</h3>
+		<ul>
+			<li>
+			<p align="left">Designed a sound static analysis to extract a hierarchical 
+			object graph that shows dataflow communication between objects</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+	<li>Vanciu, R. and Abi-Antoun, M. <b><a href="papers/VA12.pdf">Ownership 
+	Object Graphs with Dataflow Edges</a>.</b> 
+	In <i>Working Conference on Reverse Engineering (WCRE)</i>, 2012.<i>&nbsp; To 
+	appear. This paper has a companion technical report that has the&nbsp; soundness proof.</i></li>
+	<li>Vanciu, R., and Abi-Antoun, M. <b><a href="tech_reports/VA11_TR.pdf">Extracting Dataflow Communication from 
+Object-Oriented Code.</a></b> Technical report, Wayne State University,&nbsp; 
+	October 2011,
+	<b>Revised July 2012</b>.<i> This technical report includes the soundness 
+	proof.</i></li>
+	<li>Rawshdeh, S. and Abi-Antoun, M. 
+	<b><a href="tech_reports/RA11_TR.pdf">A Static Analysis to Extract 
+	Dataflow Edges from Object-Oriented Programs with Ownership Domain Annotations</a></b>. 
+	Wayne State University Technical Report, August 2011. [Revisions to Suhib&#39;s 
+	thesis.]</li>
+	<li>Rawshdeh, S. <b>A Static Analysis to Extract Dataflow Edges from 
+	Object-Oriented Programs&nbsp; with Ownership Domain Annotations</b>. M.S. Thesis, Wayne State University, Department of Computer Science. 
+	May 2011.</li>
+</ul>
+
+		<h2 align="left">Interactive Refinement of Hierarchical Object Graphs</h2>
+						
+		<h3>Synopsis</h3>
+		<ul>
+			<li>
+			Implemented a user-interface prototype for an Ownership Object Graph Interactive Editor (OOGIE); 
+			evaluated OOGIE on a small example;</li>
+			<li>
+			Work on the back-end is on-going.</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+	<li>Selitsky, T. <a href="students/10_talia_ms_thesis.pdf"><b>A Front-End for an Ownership Object Graph Interactive 
+	Editor</b>.</a> M.S. Thesis, Wayne State University, Department of Computer Science. 
+	December 2010. </li>
+	<li>
+	Abi-Antoun, M. and Selitsky, T.<b><a href="papers/10-flexi_tools.pdf">Interactive Refinement of 
+	Runtime Structure</a>.</b> <i>In Workshop on Flexible Modeling Tools (FlexiTools), 
+	co-located with SPLASH/OOPSLA, 2010.</i>
+	</li>
+	<li>Abi-Antoun, M., 
+	Selitsky, T., and&nbsp; LaToza, T. <b><a href="papers/10-shark.pdf">Developer Refinement of Runtime 
+	Architectural Structure</a></b>. In <i>Workshop on SHAring and Reusing 
+	architectural Knowledge (SHARK)</i>, 2010. [<a href="papers/10-shark.pdf">Paper 
+	(PDF)</a>] [<a href="talks/10-shark-talk.pdf">Slides 
+	(PDF)</a>] [<a href="http://doi.acm.org/10.1145/1833335.1833347">DOI</a>]</li>
+</ul>
+
+		<h2 align="left">SECORIA: analyzing security 
+		architectures</h2>
+						
+		<h3>Synopsis</h3>
+		<ul>
+			<li>
+			Specialized the S<font size="2">CHOLIA </font>approach to analyze security runtime architectures.
+			S<font size="2">ECORIA</font> stands for <u>Se</u>curity <u>C</u>onformance of 
+			<u>O</u>bject-oriented <u>R</u>untime v<u>i</u>ews of <u>A</u>rchitecture.</li>
+			<li>
+			The key difference between S<font size="2">CHOLIA</font> is that S<font size="2">ECORIA</font> 
+			enforces security architectural intent at both the architecture and 
+			the code level, once the architecture and the implementation have 
+			been related, following the S<font size="2">CHOLIA </font>approach. 
+			The target architecture is richer (has richer properties, types and 
+			constraints), and follows a DataFlow Diagram (DFD) architectural 
+			style, used in security threat modeling. </li>
+			<li>
+			To support security threat modeling, formalized a STRIDE-based security model 
+			as a reusable architectural style in the Acme Architecture 
+			Description Language (ADL).</li>
+			<li>
+			Conducted a case study on a small system, <a href="cryptodb/">
+			CryptoDB</a>.</li>
+		</ul>
+		<h3><b>Publications</b></h3>
+		<ul>
+			<li>
+			<p align="left">Abi-Antoun, M. and 
+	Barnes, J. M.&nbsp; <b><a href="papers/10-ase.pdf">Analyzing Security Architectures</a></b>. In<i> IEEE/ACM 
+	International Conference on Automated Software Engineering (ASE)</i>, pp. 
+	3-12, 2010. [<a href="http://doi.acm.org/10.1145/1858996.1859001">DOI</a>] [<a href="talks/10-ase-talk.pdf">Slides</a>] 
+	[<a href="cryptodb/">Link to additional material</a>]</li>
+	<li>Abi-Antoun, M. and 
+	Barnes, J. M.&nbsp; <b><a href="papers/CMU-ISR-10-106.pdf">STRIDE-based security model in Acme</a>. 
+	</b>Carnegie 
+	Mellon University Technical Report
+	<a href="http://reports-archive.adm.cs.cmu.edu/anon/isr2010/abstracts/10-106.html">CMU-ISR-10-106</a>.</li>
+		</ul>
+		<h2 align="left">Static Conformance Checking of Runtime Architectural 
+		Structure</h2>
+						
+		<h3>Synopsis</h3>
+		<p>
+		<img border="0" src="images/scholia.gif" width="734" height="399" style="border-width: 0pt"></p>
+		<p>
+		&nbsp;</p>
+		<p align="center">
+		<img border="0" src="images/conformance.jpg" width="474" height="490" style="border-width: 0pt; margin: 0"></p>
+		<ul>
+			<li>Designed the first approach, S<font size="2">CHOLIA</font><sup>*</sup>, to guarantee, 
+			at compile-time, communication integrity between code in a 
+			widely-used object-oriented language (Java) and a rich, hierarchical 
+			description of the architect&#39;s intended <i>runtime architecture</i>. 
+			</li>
+			<li>S<font size="2">CHOLIA </font>specifies architectural intent into source code but 
+			instead of using radical language extensions to Java, S<font size="2">CHOLIA
+			</font>uses 
+			language support for annotations. Using 
+			annotations, developers express their design insight within code, as 
+			minimally invasive hints about the architecture, rather than using a 
+			specialized framework or a new language.</li>
+			<li>S<font size="2">CHOLIA </font>is modeled closely after Gail Murphy's landmark Reflexion Models work, which handles the code architecture. 
+			S<font size="2">CHOLIA </font>is complementary, focuses on the runtime architecture, and is the 
+			first entirely static approach. Previous approaches to checking the 
+			conformance of runtime architectures used dynamic analyses that 
+			cannot check all possible system executions.</li>
+			<li>S<font size="2">CHOLIA </font>weaves into an end-to-end approach several technical 
+			pieces that we developed and follows the <i>
+			extract-abstract-check</i> strategy.&nbsp; At its core, S<font size="2">CHOLIA
+			</font>incorporates an algorithm to <i>extract</i> from an annotated 
+			program a hierarchical object 
+			graph that provides architectural 
+			abstraction by ownership hierarchy and by types. </li>
+			<li>An extracted object graph, however, may not be 
+			isomorphic to an architect&#39;s intended architecture, making further 
+			abstraction necessary. Designed an analysis to <i>abstract</i> an object 
+			graph into a Component-and-Connector&nbsp; (C&amp;C) architecture in the Acme Architecture 
+			Description Language.</li>
+			<li>Designed another analysis to <i>check</i> <i>
+			conformance</i> and display the key differences between the 
+			built and the designed architectures.&nbsp; In contrast to our 
+			earlier view synchronization which 
+			makes two views identical, S<font size="2">CHOLIA </font>allows the designed architecture 
+			to be more abstract than the built architecture. However,&nbsp; 
+			S<font size="2">CHOLIA </font>still soundly summarizes in the designed architecture any additional 
+			communication that is present in the built architecture. For example, 
+			S<font size="2">CHOLIA </font>can represent some objects in the built 
+			architecture as part of a connector in 
+			the designed architecture.</li>
+			<li>Designed conformance metrics to help managers track 
+			architectural conformance over time, as well as the ability to trace from each conformance finding to the 
+			corresponding lines of code.</li>
+			<li>In S<font size="2">CHOLIA</font>, a developer can iteratively: (a) refine the annotations; 
+			(b) manually guide the structural comparison if it fails to perform 
+			the proper match; (c) correct the code if she decides that the 
+			designed architecture is correct but that the implementation violates the 
+			architecture; or (d) update the designed architecture if she 
+			considers that the implementation highlights an error or omission in 
+			the design.</li>
+		</ul>
+		<p><font size="2">* <span style="font-variant:small-caps">Scholia</span> 
+		stands for <u>s</u>tatic <u>c</u>onformance c<u>h</u>ecking of <u>o</u>bject-based 
+		structura<u>l</u> v<u>i</u>ews of <u>a</u>rchitecture. According to Wikipedia, <i>
+		<a href="http://en.wikipedia.org/wiki/Scholia">scholia</a></i> are annotations that are inserted on the 
+		margin of an ancient manuscript. The metaphor is that this research is about 
+		supporting existing legacy, i.e., ancient, object-oriented systems, and 
+		that the approach uses 
+		annotations that other development 
+		tools can ignore.</font></p>
+		<h3><b>Publications</b></h3>
+
+<ul>
+	<li>Abi-Antoun, M.&nbsp; <b><a href="papers/CMU-ISR-10-114.pdf">Static Extraction and 
+			Conformance Analysis of Hierarchical Runtime Architectural Structure</a></b>. 
+	Ph.D. thesis, Carnegie Mellon University, 2010.&nbsp; Available as Technical Report&nbsp;
+	<a href="http://reports-archive.adm.cs.cmu.edu/anon/isr2010/abstracts/10-114.html">CMU-ISR-10-114.</a></li>
+	<li>Abi-Antoun, M. and Aldrich, J. <b><a href="papers/09-oopsla.pdf">Static Extraction and 
+			Conformance Analysis of Hierarchical Runtime Architectural Structure 
+			using Annotations</a>. </b><i>Object-Oriented Programming Systems, 
+	Languages, and Applications (OOPSLA)</i>, 2009. [<a href="papers/09-oopsla.pdf">Paper (PDF)</a>]</li>
+	<li>Abi-Antoun, M. 
+	and Aldrich, J. <b><a href="papers/CMU-ISR-08-132.pdf">Static Conformance Checking of Runtime Architectural 
+	Structure</a>. </b>Carnegie Mellon University Technical Report 
+	<a href="http://reports-archive.adm.cs.cmu.edu/anon/isr2008/abstracts/08-132.html">CMU-ISR-08-132</a>. 
+	September 2008. [<a href="papers/CMU-ISR-08-132.pdf">Report (PDF)</a>] [This report supersedes the earlier 
+	technical report
+	<a href="http://reports-archive.adm.cs.cmu.edu/anon/isri2007/abstracts/07-119.html">CMU-ISRI-07-119</a>]</li>
+	<li>Abi-Antoun, M. and Aldrich, J. <b><a href="papers/CMU-ISRI-07-119.pdf">Checking and Measuring the Architectural Structural Conformance of 
+	Object-Oriented Systems</a></b>. Carnegie Mellon University Technical Report
+	<a href="http://reports-archive.adm.cs.cmu.edu/anon/isri2007/abstracts/07-119.html">CMU-ISRI-07-119</a>, December 2007. [<a href="papers/CMU-ISRI-07-119.pdf">Report 
+	(PDF)</a>]</li>
+</ul>
+		<h2>Static Extraction of Sound Hierarchical Object Graphs</h2>
+		<table border="0" cellspacing="0" cellpadding="0" id="table1">
+			<tr>
+				<td>
+				<img border="0" src="images/image002.gif" width="266" height="480" style="border-width: 0pt"></td>
+				<td>
+				<img border="0" src="images/image004.gif" width="454" height="440" style="border-width: 0pt"></td>
+			</tr>
+			<tr>
+				<td>
+				<span style="font-size: 12.0pt; font-family: Times New Roman"></span><p>
+				<span style="font-size: 12.0pt; font-family: Times New Roman; font-weight: 700">
+				Global flat object graph for Aphyds <br>
+				(an 8,000-line Java system) extracted statically using Womble 
+				(by Jackson and Waingold, IEEE TSE, 2001).</span></td>
+				<td>
+				<span style="font-size: 12.0pt; font-family: Times New Roman"></span><p>
+				<span style="font-size: 12.0pt; font-family: Times New Roman; font-weight: 700">
+				Global hierarchical object graph for the same Aphyds system extracted 
+				statically using our approach. Box nesting indicates 
+				containment.</span></td>
+			</tr>
+		</table>
+		<h3>Synopsis</h3>
+                        <ul>
+							<li> It is hard to extract meaningful object graphs from arbitrary 
+							object-oriented code. <i>All</i> previous <i>static</i> 
+							object graph analyses, points-to analyses, or shape 
+							analyses extract flat object graphs. The analyses 
+							themselves often do not scale. More importantly, a flat 
+							object graph shows a plethora of objects that are 
+							all at the same level, which makes it hard to get a 
+							high-level picture.</li>
+							<li>The key contribution of this research is the first 
+							static 
+							analysis to extract a hierarchical and 
+							sound object 
+							graph from an arbitrary program written in a general 
+							purpose object-oriented language. The analysis relies on 
+							ownership annotations in the code, and 
+							extracts an object graph that provides architectural 
+							abstraction by ownership hierarchy and by types. Our 
+							empirical evaluation shows that hierarchy can reduce 
+							the number of objects at the top level by at least 
+							an order of magnitude.</li>
+							<li>Soundness means that the extracted object graph 
+							shows all objects in the system and all possible 
+							relations between those objects – unlike an 
+							informal design sketch. Demonstrating soundness 
+							required formalizing the analysis and proving key 
+							soundness theorems.</li>
+							<li>Evaluated the analysis on 38,000 lines of Java 
+							in extended examples and on 30,000 lines of Java 
+							during a week-long on-site field study with one of 
+							our industrial partners. The field study confirmed 
+							that an outside professional programmer understood 
+							abstraction by ownership hierarchy. </li>
+		</ul>
+						<h3><b>Publications</b></h3>
+
+<ul>
+	<li>Abi-Antoun, M. and Aldrich, J. 
+	<b><a href="papers/09-tldi-revised.pdf">Static Extraction of Sound Hierarchical Runtime Object Graphs</a>.</b> 
+	In <i>ACM SIGPLAN Workshop on Types in Language Design and Implementation (TLDI), 
+	2009. </i>[<a href="papers/09-tldi-revised.pdf">Paper (PDF)</a>]</li>
+	<li>Abi-Antoun, M. and 
+	Aldrich, J. <b><a href="papers/08-paste.pdf">A Field Study in Static 
+	Extraction of Runtime Architectures</a>.</b> In <i>8th ACM SIGPLAN-SIGSOFT 
+	Workshop on Program Analysis for Software Tools and Engineering (PASTE)</i>, 
+	2008. An earlier version appeared as Carnegie Mellon University Technical 
+	Report 
+	<a href="http://reports-archive.adm.cs.cmu.edu/anon/isr2008/abstracts/08-133.html">CMU-ISR-08-133</a>, June 2008. [<a href="papers/08-paste.pdf">Paper (PDF)</a>] 
+	[<a href="talks/08-paste-talk.pdf">Presentation (PDF)</a>]</li>
+	<li>Abi-Antoun, M. 
+	and Aldrich, J. <b><a href="papers/CMU-ISR-08-127.pdf">Static Extraction of 
+	Object-Oriented Runtime<br>
+	Architectures</a>. </b>Carnegie Mellon University Technical Report 
+	<a href="http://reports-archive.adm.cs.cmu.edu/anon/isr2008/abstracts/08-127.html">CMU-ISR-08-127</a>, March 2008. [<a href="papers/CMU-ISR-08-127.pdf">Report (PDF)</a>] </li>
+	<li>Abi-Antoun, M. and Aldrich,&nbsp; J. <b>
+	<a href="papers/07-iwaco-oog.pdf">Compile-Time Views of Execution Structure 
+	Based on Ownership</a>.</b> In <i>International Workshop on Aliasing, 
+	Confinement and Ownership in object-oriented programming (IWACO)</i>, in 
+	conjunction with the <i>European Conference on Object-Oriented Programming 
+	(ECOOP)</i>, 2007. [<a href="papers/07-iwaco-oog.pdf">Paper (PDF)</a>] [<a href="talks/07-iwaco-oog.pdf">Presentation 
+	(PDF)</a>] </li>
+	<li>Abi-Antoun, M. and Aldrich, J. <b>A Static Analysis for Extracting 
+	Runtime Views from Annotated Object-Oriented Code</b> (Demonstration). In <i>
+	Conference Companion of Object-Oriented Programming Systems, Languages, and 
+	Applications (OOPSLA)</i>, 2006. [<a href="papers/06_oopslade25-abiantoun.pdf">Paper 
+	(PDF)</a>] [<a href="talks/06-OOPSLA-D25.pdf">Presentation (PDF)</a>]</li>
+	</ul>
+
+		<h2>Reasoning about Quality Attributes at the Architectural-Level</h2>
+		
+    <h3>
+        Synopsis</h3>
+		<ul>
+			<li>Architects use several high-level 
+			architectural views of a system One such view, the runtime architecture, models 
+			runtime entities and their potential interactions, and is essential 
+			for reasoning about quality attributes such as security, 
+			performance, reliability, and distribution.</li>
+			<li>Runtime architectures take various forms. For example, a summer 
+			internship at Microsoft's Center for Software Excellence, in Manuvir 
+			Das's Program Analysis Group, in Redmond, WA, taught me about 
+			security threat modeling. Microsoft requires all shipping products 
+			to undergo threat modeling and credits this process with reducing by half the reported 
+			security vulnerabilities. Threat modeling uses runtime architectures 
+			where components are processes and connections represent data flow 
+			between them. During security review meetings, experts reason about diagrams 
+			manually drawn by developers but cannot 
+			ensure that a diagram accurately represents an implementation.</li>
+			<li>Designed an XML-based representation of Data Flow Diagram (DFDs) 
+			used in security threat modeling. Integrated an analysis to help a developer validate a DFD and 
+			detect common security design flaws before a formal review with the 
+			security experts. The representation includes elemental properties 
+			that can be assigned to each architectural element, and rules 
+			defined in terms of these elemental properties that perform an 
+			architecture analysis following the STRIDE methodology. STRIDE looks 
+			for <u>S</u>poofing, <u>T</u>ampering, <u>R</u>epudiation, <u>I</u>nformation 
+			disclosure, <u>D</u>enial of service and <u>E</u>levation of 
+			privilege vulnerabilities. </li>
+			<li>Implemented an analysis to recover an approximation of a built 
+			DFD from an implementation and check its conformance against a 
+			designed DFD by extending Gail Murphy&#39;s Reflexion Models.</li>
+		</ul>
+		<p><b>Publications</b></p>
+		<ul>
+			<li>Abi-Antoun, M., Wang, D. and Torr, P. <b><a href="papers/07_ase.pdf">
+	Checking Threat Modeling Data Flow Diagrams for Implementation Conformance 
+	and Security</a> </b>(Short Paper). <em>International Conference on 
+	Automated Software Engineering (ASE)</em>, pp. 393–396, 2007. [<a href="http://doi.acm.org/10.1145/1321631.1321692">DOI</a>]</li>
+			<li>Abi-Antoun, M., Wang, D. and Torr, P. <b>
+			<a href="papers/CMU-ISRI-06-124.pdf">Checking Threat Modeling Data Flow 
+	Diagrams for Implementation Conformance and Security</a></b>. Carnegie 
+	Mellon University Technical Report
+			<a href="http://reports-archive.adm.cs.cmu.edu/anon/isri2006/abstracts/06-124.html">CMU-ISRI-06-124</a>, September 2006. [<a href="papers/CMU-ISRI-06-124.pdf">Report 
+	(PDF)</a>]</li>
+		</ul>
+
+		<h2>Empirical Evaluation of Ownership Types on Existing Object-Oriented 
+		Code</h2>
+		
+		<p align="right"><i>"Papers have been written enough, let us see 
+		systems!" <br>
+		-- Reinhard Wilhelm</i></p>
+    <h3>
+        Synopsis</h3>
+                        <ul>
+							<li>Many ownership type systems are paper-only 
+							designs without tool support, or have not 
+							been evaluated in substantial case studies on real 
+							code. Most ownership types researchers have focused 
+							on the canonical iterator example, or applied 
+							ownership types to the standard design patterns in 
+							isolation. However, many expressiveness 
+							challenges arise in real object-oriented code, and 
+							when the same objects are involved in several design 
+							patterns. In addition, a standard design pattern can 
+							be implemented in multiple ways.</li>
+							<li>The <a href="http://archjava.fluid.cs.cmu.edu/">
+							ownership domains</a> type system (Aldrich and 
+							Chambers, ECOOP&#39;04) has had a 
+							publicly available open-source compiler for a few 
+							years. But the tool support initially used breaking language extensions 
+							to Java, and 
+							the Barat research infrastructure, which is 
+							neither maintained nor does it support Java 
+							generics.</li>
+							<li>Re-implemented ownership domains as 
+							backward-compatible Java 1.5 
+							annotations, using the Eclipse infrastructure, to improve the tool support. 
+							This enabled conducting some of the <i>largest </i>case 
+							studies to date in applying ownership types to real 
+							object-oriented code. 
+							</li>
+							<li>Added annotations to the following subject 
+							systems:<ul>
+							<li><a href="http://www.jhotdraw.org/">JHotDraw</a>, 
+								a 15,000-line Java framework, rich with design 
+								patterns, and a significant example in the 
+								object-oriented programming community;</li>
+							<li>
+							<a href="http://www.cs.ubc.ca/labs/lci/CIspace/">HillClimber</a> (part of the CIspace project), 
+							a 15,000-line Java program developed by 
+							undergraduates;</li>
+							<li>Aphyds, an 8,000-line Java system;</li>
+							<li>LbGrid, a 30-KLOC module from a 250-KLOC 
+								commercial system.</li>
+		</ul></li>
+		</ul>
+		<ul>
+							<li>An interesting finding was that adding to an 
+							existing program types intended to enforce design can identify bad design or subtle 
+							bugs in the program.&nbsp; For example, the annotations can 
+							highlight 
+							tight object coupling, object borrowing issues, irregular 
+							inheritance hierarchies, etc. </li>
+							<li>This work also helped 
+							identify a number of expressiveness challenges in 
+							the ownership type system that we plan to address in future work.</li>
+		</ul>
+						<h3><b>Publications</b></h3>
+	<ul>
+	<li>Abi-Antoun, M. and 
+	Aldrich, J. <b><a href="papers/08-paste.pdf">A Field Study in Static 
+	Extraction of Runtime Architectures</a>.</b> In <i>8th ACM SIGPLAN-SIGSOFT 
+	Workshop on Program Analysis for Software Tools and Engineering (PASTE)</i>, 
+	2008. An earlier version appeared as Carnegie Mellon University Technical 
+	Report 
+	<a href="http://reports-archive.adm.cs.cmu.edu/anon/isr2008/abstracts/08-133.html">CMU-ISR-08-133</a>, June 2008. [<a href="papers/08-paste.pdf">Paper (PDF)</a>] 
+	[<a href="talks/08-paste-talk.pdf">Presentation (PDF)</a>]</li>
+	<li>Abi-Antoun, M. and Aldrich,&nbsp; J. <b>
+	<a href="papers/07-iwaco-casestudies.pdf">Ownership Domains in the Real 
+	World</a>.</b> In <i>International Workshop on Aliasing, Confinement and 
+	Ownership in object-oriented programming (IWACO)</i>, in conjunction with 
+	the <i>European Conference on Object-Oriented Programming (ECOOP)</i>, 2007. 
+	[<a href="papers/07-iwaco-casestudies.pdf">Paper (PDF)</a>]&nbsp; [<a href="talks/07-iwaco-casestudies.pdf">Presentation 
+	(PDF)</a>] </li>
+	<li>Abi-Antoun, M. and Aldrich, J. <b>Bringing Ownership Domains to 
+	Mainstream Java</b> (Demonstration). In <i>Conference Companion of 
+	Object-Oriented Programming Systems, Languages, and Applications (OOPSLA)</i>, 
+	2006.&nbsp; [<a href="papers/06_oopslade08-abiantoun.pdf">Paper (PDF)</a>] [<a href="talks/06-OOPSLA-D08.pdf">Presentation 
+	(PDF)</a>]</li>
+	<li>Abi-Antoun, M. and Aldrich, J. <b>JavaD: Bringing Ownership Domains to 
+	Mainstream Java.</b> Carnegie Mellon University Technical Report 
+	CMU-ISRI-06-110, 2006. [<a href="papers/CMU-ISRI-06-110.pdf">Report (PDF)</a>].</li>
+	</ul>
+
+		<h2>Empirical Evaluation of Language-Based Solution for Specifying 
+		Architecture in Code and Enforcing Communication Integrity</h2>
+    <h3>
+        Synopsis</h3>
+		<ul>
+			<li><a href="http://archjava.fluid.cs.cmu.edu/">ArchJava</a>, designed by Ph. D. advisor Jonathan Aldrich, is the 
+			first language to exemplify a language-based solution for&nbsp; 
+			specifying and enforcing architectural hierarchy and 
+			instances in code, using language constructs such as 
+			components and ports. If an ArchJava 
+			program typechecks, it is guaranteed to conform to its architecture. 
+			However, ArchJava imposes strict restrictions on passing 
+			object references. As a result, using ArchJava for an existing 
+			system requires a non-trivial re-engineering to abide by the type system&#39;s restrictions.</li>
+			<li>The goal of this research was to better understand the process 
+			of re-engineering an existing system to ArchJava and the perceived 
+			limitations with the language or approach.</li>
+			<li>As a first iteration, re-engineered a realistic legacy system to 
+			ArchJava to specify and enforce the architectural control flow 
+			(WICSA&#39;05 paper). As a 
+			second iteration, added ownership annotations to specify and enforce 
+			the data sharing using ownership domains annotations (JSS&#39;07 paper). </li>
+			<li>The HillClimber case study is one the largest ArchJava case studies to date, 
+			with over 16,000 source lines of Java code. For comparison, the 
+			previous largest case study was around 8,000 lines.</li>
+			<li>HillClimber was also the first 
+			case study that used the version of ArchJava described in Aldrich's 
+			Ph.D. dissertation and WICSA'08 paper, which includes both the control 
+			flow constructs (component classes and ports) and the data 
+			sharing constructs (domain 
+			and aliasing annotations).</li>
+			<li>This research led to two key insights. First, adding ownership 
+			annotations is less invasive than converting regular Java 
+			classes to ArchJava component classes, because the ownership 
+			annotations do not affect the program's runtime semantics. Second, 
+			the 
+			ownership annotations enable architectural abstraction by making 
+			low-level objects, such as data structures, part of more architecturally relevant 
+			objects 
+			from the application domain.</li>
+</ul>
+						<h3><b>Publications</b></h3>
+
+<ul>
+	<li>Abi-Antoun, M., Aldrich, J., and Coelho, W. <b>A Case Study in 
+	Re-engineering to Enforce Architectural Control Flow and Data Sharing. </b>
+	In <i>Journal of Systems and Software,</i> 80(2), pp. 240--264, 2007. [<a href="papers/07-jss-preprint.pdf">Preprint 
+	(PDF)</a>] [<a href="http://dx.doi.org/10.1016/j.jss.2006.10.036">Published 
+	Link</a>]<i>. [Note: this is an invited paper that expands the WICSA&#39;05 
+	paper to add AliasJava annotations to the ArchJava implementation.]</i></li>
+	<li>Abi-Antoun, M., and Coelho, W. <b>
+	<a href="papers/05_wicsa_casestudy.pdf">A Case Study in Incremental 
+	Architecture-Based Re-engineering of a Legacy Application</a>.</b> In P<i>roceedings 
+	of the 5th Working IEEE/IFIP Conference on Software Architecture (WICSA-5)</i>, 
+	2005. [<a href="papers/05_wicsa_casestudy.pdf">Paper (PDF)</a>] [<a href="talks/05-wicsa-casestudy.pdf">Presentation 
+	(PDF)</a>]. [Note: This paper was selected as one of the &quot;<i>BEST papers at 
+	the WICSA 2005&quot;</i>, and we were invited to write an extended version for 
+	the <i>Journal of Systems and Software</i>.]</li>
+	</ul>
+
+		<h2>Structural Comparison of Hierarchical Architectural Views</h2>
+		
+		<p align="right"><i>"Never go to sea with two chronometers; take one or 
+		three" <br>
+		-- Proverb</i></p>
+    <h3>
+        Synopsis</h3>
+		<ul>
+                        <li>
+						Code generation guarantees only initial conformance and 
+						may only be applicable in certain restricted domains. A 
+						more general approach is to synchronize 
+						a designed and a built architecture <i>after the fact</i>.
+						
+						<li>
+						The key contribution was designing a novel&nbsp; approach for 
+						structurally comparing two hierarchical architectural 
+						views. Using structural information enables detecting: 
+						a) inserted; b) deleted; c) renamed; and d) moved elements. 
+						In contrast, previous approaches to differencing 
+						architectural views assumed that view elements have unique node identifiers, which 
+						is often not the case. Other approaches 
+						detected only insertions and deletions, and as a result 
+						lost the properties associated with an architectural element, 
+						properties that architectural-level analyses rely on.
+						
+						<li>
+						Incorporated the comparison algorithm into two tools. 
+						The first tool 
+						synchronizes between an Acme model representing the 
+						target architecture and a built architecture extracted 
+						from an ArchJava implementation. The second tool deals with differencing 
+						and merging two arbitrary versions of an architectural 
+						model represented in Acme.<li>
+						Performed case studies to illustrate the usefulness of 
+						the tools.<li>Using ArchJava implementation also helped 
+						identify various mismatches between a 
+						conceptual-level designed architecture and an 
+						implementation-level built architecture that any 
+						synchronization approach must bridge.<body></body></ul>
+						
+						<h3><b>Publications</b></h3>
+						<ul>
+	<li>Abi-Antoun, M., Aldrich,&nbsp;J., Nahas, N., Schmerl, B. and Garlan, D.<b> 
+	<a href="papers/07-jase-preprint.pdf">Differencing and Merging of 
+	Architectural Views</a>. </b>
+	<i>In <a href="http://www.springerlink.com/content/1573-7535/">Automated 
+	Software Engineering Journal</a>, Special Issue</i> <i>on Selected Papers 
+	from Automated Software Engineering (ASE&#39;06), </i>15(1), pp. 35--74, 2008.<i> </i>
+	[<a href="papers/07-jase-preprint.pdf">Preprint (PDF)</a>] [<a href="http://www.springerlink.com/content/x3524511446424mq/fulltext.pdf">Published 
+	Link</a>] [<a href="http://dx.doi.org/10.1007/s10515-007-0023-3">DOI</a>]</li>
+	<li>Abi-Antoun, M., Aldrich,&nbsp; J., Nahas, N., Schmerl, B. and Garlan, D.<b> 
+	<a href="papers/06-ase.pdf">Differencing and Merging of Architectural Views</a>. </b>
+	In <i>Proceedings of the 21st IEEE International Conference on Automated 
+	Software Engineering (ASE&#39;06), </i>2006.&nbsp; [<a href="papers/06-ase.pdf">Paper 
+	(PDF)</a>] [<a href="papers/06_ase_slides.pdf">Presentation (PDF)</a>] [<a href="papers/06_ase.ppt">Presentation 
+	with animations (PowerPoint)</a>][<a href="papers/Aphyds.avi">Aphyds 
+	Demo(AVI)</a>][<a href="papers/AphydsDemo/AphydsDemo.html">Aphyds Demo (MOV)</a>][<a href="papers/Dukes.avi">Duke&#39;s 
+	Bank Demo (AVI)</a>][<a href="papers/DukesBankDemo/DukesBankDemo.html">Duke&#39;s 
+	Bank Demo (MOV)</a>]</li>
+	<li>Abi-Antoun, M., Aldrich,&nbsp; J., Nahas, N., Schmerl, B. and Garlan, D.<b> 
+	Differencing and Merging of Architectural Views. </b>Carnegie Mellon 
+	University Technical Report CMU-ISRI-05-128, August 2005. [<a href="papers/CMU-ISRI-05-128.pdf">Report 
+	(PDF)</a>]<i> </i>[Note: This is the most comprehensive description of the 
+	work to date. <i>Last Revised March 2006.</i>]</li>
+	<li>Abi-Antoun, M., 
+	Aldrich, J., Garlan, D., Schmerl, B. and Nahas, N.<b> Semi-Automated 
+	Incremental Synchronization between Conceptual and Implementation Level 
+	Architectures </b>(Position Paper)<b>. </b><i>Proceedings of the 5th 
+	Working IEEE/IFIP Conference on Software Architecture (WICSA-5)</i>, 2005. [<a href="papers/05_wicsa_synchronization.pdf">Paper 
+	(PDF)</a>] [<a href="talks/05-wicsa-wg.pdf">Presentation (PDF)</a>]</li>
+	<li>Abi-Antoun, M., Aldrich,&nbsp; J., Garlan, D., Schmerl, B., Nahas, N., 
+	and Tseng, T. <b>Modeling and Implementing Software Architecture with Acme 
+	and ArchJava </b>(Research Demonstration). In <i>Proceedings of the 
+	International Conference on Software Engineering (ICSE&#39;05)</i>, May 15-21, 
+	2005, St. Louis, Missouri, USA. [<a href="papers/05-icse-rd.pdf">Paper (PDF) </a>
+	] [<a href="talks/05-icse-rd.pdf">Presentation (PDF)</a>]</li>
+	<li>Abi-Antoun, M., 
+	Aldrich, J., Garlan, D., Schmerl, B., Nahas, N., and Tseng, T.<b> Improving 
+	System Dependability by Enforcing Architectural Intent</b>.<b>
+	</b>In <i>Proceedings of the Workshop on Architecting Dependable Systems 
+	(WADS), </i>2005.&nbsp;[<a href="papers/05-wads.pdf">Paper (PDF)</a>] [<a href="talks/05-wads.pdf">Presentation 
+	(PDF)</a>]</li>
+						</ul>
+
+		<h2>Ensuring Conformance by Code Generation: Language-Based Solutions</h2>
+		
+    <h3>
+        Synopsis</h3>
+		<ul>
+			<li>Inherited and completed a tool for generating ArchJava code from 
+			an architectural model in the Acme Architecture Description Language. ArchJava, designed by my Ph. D. advisor Jonathan Aldrich, 
+			extends the language to specify in code architectural components and ports.</li>
+			<li>Studied mismatches between an Architecture Description Language&nbsp; like Acme 
+			for describing a conceptual architecture, and a language like 
+			ArchJava for specifying an implementation-level architecture. Some 
+			design choices included: How to represent ArchJava's 
+			private ports in Acme? Is a component more than the sum of its 
+			sub-components? E.g., Acme does not allow binding outer port to 
+			inner role, etc.</li>
+		</ul>
+		<p><b>Publications</b></p>
+						<ul>
+	<li>Tool initially demonstrated at OOPSLA'04: Aldrich, J., Garlan, D., 
+	Schmerl, B., and Tseng, T. Modeling and Implementing Software Architecture 
+	with Acme and ArchJava. OOPSLA Companion, 2004. [The tool demonstration was 
+	accepted before I arrived at CMU, so I was not listed as a co-author, but 
+	the tool was not yet fully working ;-) ]</li>
+						</ul>
+
+		<h2>Ensuring Conformance by Code Generation: Library-Based Solutions</h2>
+		
+    <h3>
+        Synopsis</h3>
+		<ul>
+			<li>Implemented an approach to generate starter code from an 
+			architectural model in the C2SADL Architecture Description Language 
+			onto the C2 architectural middleware framework.</li>
+			<li>Many others emulated this work using various 
+			implementation substrates and high-level representations of the 
+			architecture.</li>
+		</ul>
+		<p><b>Publications</b></p>
+						<ul>
+	<li>Abi-Antoun, M., and Medvidovic, N. <b>Enabling the Refinement of a 
+	Software Architecture into a Design.</b> In <i>Proceedings of The Second 
+	International Conference on the Unified Modeling Language (UML'99)</i>, 
+	1999. </li>
+						</ul>
+                        </li>
+
+
+</div>
+<!-- end content -->
+</div>
+<!-- end main -->
+	
+<!-- footer -->
+<div id="footer">
+<div id="left_footer">&copy; Copyright 2016 Marwan Abi-Antoun
+</div>
+</div>
+<!-- end footer -->
+
+</body>
+</html>

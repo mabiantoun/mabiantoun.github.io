@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Marwan Abi-Antoun, Ph.D.</title>
+    <!-- Bootstrap core CSS -->
+    <!-- link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet" -->
+    <!-- Custom styles for this template -->
+    <!-- link href="styles.css" rel="stylesheet" -->
+</head>
+
+<body>
+
+<div id="container">
+	<!-- header -->
+    <div class="header">
+        <nav class="menu">
+	    <a class="" href="index.html">Home</a>
+		<a class="" href="publications.html">Papers</a>
+		<a class="" href="research.html">Research</a>
+		<a class="" href="teaching.html">Teaching</a>
+		<a class="" href="talks.html">Talks</a>
+		<a class="active" href="software.html">Software</a>
+		<a class="" href="resume.html">Bio</a>			
+        </nav>
+    </div>
+    <!--end header -->
+</div>
+
+<!-- main -->
+<div id="main">
+   		<div id="content">
+   		
+		&nbsp;<p>In my research, my collaborators and I implemented several research tools and demonstrated 
+		them during formal research tool demonstrations at various conferences 
+		listed below. All these tools include contributions by my collaborators, 
+		including my own Ph.D. 
+		advisor, Jonathan Aldrich, as well as my own advisees.</p>
+		<p>My advisees 
+		learn to write program analysis tools that use Abstract Syntax Tree 
+		(AST) visitors or dataflow analysis frameworks, and deal with 
+		many common issues to program analysis writers, like handling library 
+		code, persisting results, and producing meaningful error messages. We 
+		also learn in great detail various APIs such as the Eclipse Java AST, 
+		Eclipse plugin development, etc.</p>
+		<p>The following research tools are 
+		Eclipse plug-ins and written in Java. They are available, upon request, 
+		for research evaluation or use. The tools are listed in <b>reverse chronological order.</b></p>
+
+		<h2>ArchDoc: the Eclipse Runtime Perspective<br>
+		<font size="4">with Andrew Giang</font></h2>
+		<ul>
+			<li>ArchSummary: compute Most Important Classes MICs, Most Important 
+			Methods of a Class C MIMs(C), Most Important Classes Related to a 
+			Class MIRCs(C), and Most Important Classes Behind an Interface 
+			MCBIs(C), based on information from the abstract runtime structure;</li>
+			<li>ArchDoc: an Eclipse perspective that queries information from the abstract 
+			runtime structure and presents it to developers in several Eclipse 
+			views; breaks up the previously monolithic OOG viewer into multiple 
+			Eclipse views and introduces several novel views.</li>
+			<li>ArchDoc was formally demonstrated: Giang 
+	A. and Abi-Antoun M. <a href="papers/GA13_DEMO.pdf"> <b>Finding the Missing Eclipse Perspective: the Runtime 
+	Perspective</b>.</a> 
+	In <i>ACM Conference on Systems, Programming, Languages and Applications: 
+	Software for Humanity (SPLASH)</i>. Tool Demonstration. 2013. [<a href="talks/13-GA13_SPLASH_slides.pdf">Slides</a>]</li>
+		</ul>
+
+		<h2>ArchMetrics<br>
+		<font size="4">with Andrew Giang, Sumukhi Chandrashekar</font></h2>
+		<ul>
+			<li>Java component: Java framework that supports defining metrics: 
+			each metric is a separate class, and generates two sets of CSV 
+			files: a set of detailed files for human consumption and a set of 
+			terse files that are used as input to a number of R scripts;</li>
+			<li>R component: the R scripts load the various CSV files, compute 
+			statistics, generate LaTex tables with numbers and generate various 
+			plots.</li>
+		</ul>
+
+		<h2>Scoria: <u>S</u>ecurity <u>C</u>onstraints <u>O</u>n <u>R</u>unt<u>I</u>me
+		<u>A</u>rchitecture<br>
+		<font size="4">with Radu Vanciu (lead)</font></h2>
+		<ul>
+			<li>SecOOG: a lightweight wrapper for an OOG extracted by ScoriaX, with a Java API, on 
+			which to set security properties, write queries and execute 
+			constraints to find security vulnerabilities;</li>
+			<li>Packaged in a way that the constraints can be written as JUnit 
+			tests.</li>
+			<li>ScoriaX and Scoria were formally demonstrated: Vanciu 
+	R. and Abi-Antoun M. <a href="papers/VA13_DEMO.pdf"> <b>Finding Architectural Flaws in Android Apps Is Easy</b>.</a> 
+	In <i>ACM Conference on Systems, Programming, Languages and Applications: 
+	Software for Humanity (SPLASH). </i>Tool Demonstration.&nbsp; 2013. [<a href="talks/13-VA13_SPLASH_slides.pdf">Slides</a>]</li>
+		</ul>
+
+		<h2>ScoriaX: Static Extraction Analysis<br>
+		<font size="4">with Radu Vanciu (lead)</font></h2>
+		<ul>
+			<li>ScoriaX: static analysis to extract different types of 
+			communication on a hierarchical abstract object graph: data flow, control flow, and creation, in addition to 
+			points-to edges;</li>
+			<li>Uses the Crystal static analysis framework and transfer 
+			functions.</li>
+		</ul>
+		<h2>Utilities<font size="4"><br>
+		with Radu Vanciu, Andrew Giang</font></h2>
+		<ul>
+			<li>MiniAST: <span LANG="EN"><font SIZE="3">a simplified Abstract 
+			Syntax Tree (AST) model, independent from the Eclipse AST, to 
+			maintain traceability between the OOG and the code and enable 
+			writing constraints that query information from the code structure;</font></span></li>
+			<li>ArchTrace: component to trace from the a MiniAST node to the 
+			corresponding Eclipse AST node and lines of code in Eclipse;</li>
+			<li>ArchLib: generate Java code skeletons to add annotations to the 
+			signatures of library classes.</li>
+		</ul>
+
+		<h2>Tools for Ownership Annotations, Ownership Object Graphs (OOGs)<br>
+		<font size="4">with Radu Vanciu, Zeyad Hailat</font></h2>
+		<ul>
+			<li>OOG Metrics: compute metrics on the extracted Ownership 
+			Object Graph (OOG);</li>
+			<li>Annotation Metrics: compute metrics on the Ownership Domain 
+			annotations added to the code;</li>
+			<li>ArchDefault: propagate initial annotations 
+			based on a user-specified map.</li>
+		</ul>
+		<h2>SECORIA<br>
+		<font size="4">with Jeff Barnes</font></h2>
+		<ul>
+			<li>A re-implementation of an architectural-level security analysis 
+			that follows the STRIDE model using the Acme Architecture Description Language (ADL), 
+			by defining a set of component types, connector types, and 
+			predicates;</li>
+			<li>The main advantages of using an ADL are having a declarative 
+			language and the relative ease of extensibility. The main drawback 
+			is requiring developers to learn a different language.</li>
+			<li>[<a href="http://www.cs.wayne.edu/~mabianto/cryptodb/">Link to 
+			additional material</a>]</li>
+		</ul>
+		<h2>&nbsp;ArchDomJ, ArchCheckJ: annotation system and typechecker</h2>
+
+<ul>
+	<li><b>ArchDomJ: </b>a re-implementation of the<b>
+	<a href="http://archjava.fluid.cs.cmu.edu/software/index.html">ownership domains type system 
+	(AliasJava)</a></b><a href="http://archjava.fluid.cs.cmu.edu/software/index.html">
+	</a>by Aldrich et al., using Java 1.5 
+	annotations and the Eclipse infrastructure. This implementation also 
+	contains additional features such as checking domain links, support for 
+	annotating external library code using XML files (AliasXML), among others.</li>
+	<li>Requirements: Eclipse</li>
+	<li>Initially demonstrated at OOPSLA&#39;06: Abi-Antoun, M. and Aldrich, J. 
+	<b><a href="http://doi.acm.org/10.1145/1176617.1176682">Bringing Ownership Domains to Mainstream Java</a></b>. OOPSLA Companion, 2006.</li>
+	<li>Also demonstrated at ECOOP&#39;07: Abi-Antoun, M. and Aldrich, J. Eclipse 
+	Plug-ins for Statically Checking and Visualizing Ownership Domain 
+	Annotations, ECOOP Companion, 2007.</li>
+	</ul>
+
+		<h2>ArchRecJ: hierarchical object graph extractor</h2>
+		<ul>
+	<li><b>ArchRecJ</b>: extracts a hierarchical object graph from Java code 
+	with ownership domain annotations.</li>
+	<li>The tool uses the annotations to control abstraction by ownership 
+	hierarchy, and allows the user to optionally abstract objects in a domain by 
+	their types.</li>
+	<li>Requirements: Eclipse, ArchDomJ</li>
+	<li>Initially demonstrated at OOPSLA&#39;06: Abi-Antoun, M. and Aldrich, J. <b>
+	<a href="http://doi.acm.org/10.1145/1176617.1176699">A 
+	Static Analysis for Extracting Runtime Views from Annotated Object-Oriented 
+	Code</a></b>. OOPSLA Companion, 2006.</li>
+	<li>Updated version of the tool demonstrated at OOPSLA&#39;08: Abi-Antoun, M. and Aldrich, J. 
+	<b><a href="http://doi.acm.org/10.1145/1449814.1449840">Tool Support for the Static Extraction of Sound Hierarchical Representations 
+	of Runtime Object Graphs</a></b>. OOPSLA Companion, 2008.</li>
+						</ul>
+
+		<h2>ArchConf: architectural conformance checker</h2>
+		<p>The conformance checking tool suite supports the <i>
+		extract-abstract-check</i> methodology:</p>
+		<ul>
+			<li><b>ArchRecJ</b>: <i>extract</i> a hierarchical object graph from 
+			annotated code;</li>
+			<li><b>ArchCog</b>: <i>abstract</i> an extracted object graph and 
+			represent it as a 
+			Component-and-Connector architecture (C&amp;C view) in the
+			<a href="http://www.cs.cmu.edu/~acme">Acme</a> Architecture Description 
+			Language;</li>
+			<li><b>ArchConf</b>: <i>check</i> and display conformance between the built and 
+			the designed runtime architectures;</li>
+			<li><b>CodeTraceJ</b>: <i>trace</i> each conformance finding to the corresponding 
+			locations in the code;</li>
+			<li>Requirements: Eclipse, <a href="http://www.cs.cmu.edu/~acme">AcmeStudio</a>, 
+			ArchDomJ</li>
+			<li>Initially demonstrated at OOPSLA&#39;08: Abi-Antoun, M. and Aldrich, 
+			J. <b><a href="http://doi.acm.org/10.1145/1449814.1449839">Tool Support for Statically Checking the Structural Conformance 
+			of an Object-Oriented System to its Runtime Architecture.</a></b> OOPSLA 
+			Companion, 2008.</li>
+		</ul>
+
+		<p>A walkthrough using the conformance tools<b> </b>is<b>
+		<a href="inprep/conformance_tools/index.html">available here</a></b>.</p>
+
+		<h2>ArchSynch: architectural synchronizer</h2>
+                        <ul>
+							<li><b>ArchSynch: </b>a tool for differencing and 
+							merging two architectural 
+							specifications in Acme using structural comparison.</li>
+							<li>Collaborators: Nagi Nahas (on the tree-to-tree 
+							correction algorithm), David Garlan and Bradley 
+							Schmerl (on Acme and Acme Studio)</li>
+							<li>Requirements: Eclipse and 
+							<a href="http://www.cs.cmu.edu/~acme">AcmeStudio</a></li>
+							<li>Demonstrated at ASE&#39;06: Abi-Antoun, M., Aldrich,&nbsp; J., Nahas, N., Schmerl, B. and Garlan, D.<b> 
+	<a href="papers/06-ase.pdf">Differencing and Merging of Architectural Views</a>. </b>
+	In <i>
+	Proceedings of the 21st IEEE International Conference on Automated Software 
+	Engineering (ASE&#39;06), </i>pp. 47–58, 2006.&nbsp; [<a href="papers/Aphyds.avi">Aphyds Demo 
+	(AVI)</a>][<a href="papers/AphydsDemo/AphydsDemo.html">Aphyds Demo (MOV)</a>][<a href="papers/Dukes.avi">Duke&#39;s 
+	Bank Demo (AVI)</a>][<a href="papers/DukesBankDemo/DukesBankDemo.html">Duke&#39;s 
+	Bank Demo (MOV)</a>] [<a href="http://dx.doi.org/10.1109/ASE.2006.33">DOI</a>]</li>
+		</ul>
+		<h2>ArchJ2Acme: Acme and ArchJava synchronizer</h2>
+		<ul>
+							<li><b>ArchJ2Acme</b>: extract a built architecture from 
+							an ArchJava 
+							implementation and incrementally synchronize with a designed 
+							architecture in Acme.</li>
+							<li>Requirements: Eclipse and 
+							<a href="http://www.cs.cmu.edu/~acme">AcmeStudio</a></li>
+							<li>Initially demonstrated at ICSE&#39;05: Abi-Antoun, 
+							M., Aldrich, J., Garlan, D., Schmerl, S., Nahas, N., 
+							and Tseng, T. Modeling and Implementing Software 
+							Architecture with Acme and ArchJava. ICSE, 2005. </li>
+		</ul>
+
+		<h2 align="left">Acme2ArchJ:&nbsp;code generator from Acme to ArchJava</h2>
+						
+		<ul>
+			<li><b>Acme2ArchJ:</b> generate ArchJava skeleton code from a specification in the Acme 
+			Architecture Description Language.</li>
+			<li>Collaborators: Tony Tseng</li>
+			<li>Requirements: Eclipse and <a href="http://www.cs.cmu.edu/~acme">AcmeStudio</a>, an Eclipse plug-in for 
+			architectural modeling using Acme </li>
+			<li>Initially demonstrated at OOPSLA&#39;04: Aldrich, J., Garlan, D., 
+			Schmerl, B., and Tseng, T. Modeling and Implementing Software 
+			Architecture with Acme and ArchJava. OOPSLA Companion, 2004.</li>
+		</ul>
+
+
+</div>
+<!-- end content -->
+</div>
+<!-- end main -->
+
+<!-- footer -->
+<div id="footer">
+	<div id="left_footer">&copy; Copyright 2016 Marwan Abi-Antoun
+	</div>
+</div>
+<!-- end footer -->
+
+</body>
+</html>
